@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://game.iosdevlog.com/404.html</loc>
+    
+    <lastmod>2019-11-29T18:14:18.669Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://game.iosdevlog.com/categories/index.html</loc>
     
     <lastmod>2019-11-29T18:01:28.355Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://game.iosdevlog.com/404.html</loc>
     
     <lastmod>2019-11-29T12:31:28.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/404.html</loc>
-    
-    <lastmod>2019-11-29T11:49:49.650Z</lastmod>
     
   </url>
   
