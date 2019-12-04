@@ -1,47 +1,419 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Game code Github Templete</title>
-      <link href="/2019/12/03/Templete/"/>
-      <url>/2019/12/03/Templete/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Unity-的-gitignore-设置"><a href="#Unity-的-gitignore-设置" class="headerlink" title="Unity 的 .gitignore 设置"></a>Unity 的 <code>.gitignore</code> 设置</h2><p>新建 GiHub 仓库：<a href="http://github.com/new" target="_blank" rel="noopener">http://github.com/new</a></p><img src="/2019/12/03/Templete/GameDevLogTemplete.png" class="" title="[GameDevLogTemplete]"><a id="more"></a><h2 id="配置-Unity-以进行版本控制"><a href="#配置-Unity-以进行版本控制" class="headerlink" title="配置 Unity 以进行版本控制"></a>配置 Unity 以进行版本控制</h2><ul><li>打开编辑器设置窗口。<ul><li><code>Edit &gt; Project Settings &gt; Editor</code></li></ul></li><li>使<code>.meta</code>文件可见，以避免损坏的对象引用。<ul><li><code>Version Control / Mode: “Visible Meta Files”</code></li></ul></li><li>使用纯文本序列化可以避免无法解决的合并冲突。<ul><li><code>Asset Serialization / Mode: “Force Text”</code></li></ul></li><li>保存您的更改。<ul><li><code>File &gt; Save Project</code></li></ul></li></ul><h2 id="使用-Git-大文件存储"><a href="#使用-Git-大文件存储" class="headerlink" title="使用 Git 大文件存储"></a>使用 Git 大文件存储</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"># 3D models</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">*.3dm filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">*.3ds filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">*.blend filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">*.c4d filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">*.collada filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">*.dae filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">*.dxf filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">*.fbx filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">*.jas filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">*.lws filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">*.lxo filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">*.ma filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">*.max filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">*.mb filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">*.obj filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">*.ply filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">*.skp filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">*.stl filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">*.ztl filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"># Audio</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">*.aif filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">*.aiff filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">*.it filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">*.mod filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">*.mp3 filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">*.ogg filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">*.s3m filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">*.wav filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">*.xm filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"># Fonts</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">*.otf filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">*.ttf filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"># Images</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">*.bmp filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">*.exr filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">*.gif filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">*.hdr filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">*.iff filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">*.jpeg filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">*.jpg filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">*.pict filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">*.png filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">*.psd filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">*.tga filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">*.tif filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">*.tiff filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line"># Collapse Unity-generated files on GitHub</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">*.asset linguist-generated</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line">*.mat linguist-generated</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">55</span></pre></td><td class="code"><pre><span class="line">*.meta linguist-generated</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">56</span></pre></td><td class="code"><pre><span class="line">*.prefab linguist-generated</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">57</span></pre></td><td class="code"><pre><span class="line">*.unity linguist-generated</span></pre></td></tr></table></figure><h2 id="Commit-规范和格式化"><a href="#Commit-规范和格式化" class="headerlink" title="Commit 规范和格式化"></a>Commit 规范和格式化</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install -g commitizen cz-conventional-changelog</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'&#123; "path": "cz-conventional-changelog" &#125;'</span> &gt; ~/.czrc</span></pre></td></tr></table></figure><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>Bomber Man / 炸弹人</title>
+    <url>/2019/12/04/Bomber-Man/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://github.com/GameDevLog/GameDevLogTemplete/raw/master/ScreenShots/BomberMan.gif" alt="Bomber Man"></p>
+<a id="more"></a>
+
+<p><img src="https://github.com/GameDevLog/BomberMan/raw/master/Screenshots/BomberMan.png" alt="Bomber Man"></p>
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="创建-BomberMan-游戏"><a href="#创建-BomberMan-游戏" class="headerlink" title="创建 BomberMan 游戏"></a>创建 <strong>BomberMan</strong> 游戏</h3><img src="/2019/12/04/Bomber-Man/CreateBomberMan.png" class="" title="CreateBomberMan">
+
+<h3 id="导入资源"><a href="#导入资源" class="headerlink" title="导入资源"></a>导入资源</h3><p>可以从 GitHub 上面查看到。</p>
+<img src="/2019/12/04/Bomber-Man/Assets_Sprites.png" class="" title="import Sprites Assets">
+
+<h3 id="设置分辨率-400x800"><a href="#设置分辨率-400x800" class="headerlink" title="设置分辨率 400x800"></a>设置分辨率 400x800</h3><p>从 <code>Project &gt; Sprites</code> 中拖动 <code>BG</code> 到 <code>GamePlay</code> Scene。</p>
+<img src="/2019/12/04/Bomber-Man/Resolution_400_800.png" class="" title="Resolution 400x800">
+
+<h3 id="添加背景"><a href="#添加背景" class="headerlink" title="添加背景"></a>添加背景</h3><ul>
+<li>BG<ul>
+<li>Transform<ul>
+<li>Scale<ul>
+<li>X: <code>1.5</code></li>
+<li>Y: <code>1.5</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/04/Bomber-Man/BackGround.png" class="" title="BackGround">
+
+<h3 id="添加-Player"><a href="#添加-Player" class="headerlink" title="添加 Player"></a>添加 Player</h3><p>从 <code>Project &gt; Sprites</code> 中拖动 <code>Player</code> 到 <code>GamePlay</code> Scene。</p>
+<ul>
+<li>Player<ul>
+<li>Transform<ul>
+<li>Position<ul>
+<li>X: <code>0</code></li>
+<li>Y: <code>-3.66</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sprite Renderer<ul>
+<li>Additional Settings<ul>
+<li>Order in Layer: <code>1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/04/Bomber-Man/Player.png" class="" title="Player">
+
+<h4 id="给-Player-添加-Rigibody-2D"><a href="#给-Player-添加-Rigibody-2D" class="headerlink" title="给 Player 添加 Rigibody 2D"></a>给 Player 添加 Rigibody 2D</h4><ul>
+<li>Player<ul>
+<li>Add Component<ul>
+<li>Rigibody 2D</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/04/Bomber-Man/Rigibody_2D.png" class="" title="Rigibody 2D">
+
+<p><code>Kinematic</code>: 运动学</p>
+<p>如果该属性设置为 <code>true</code> 表示该物体运动状态不受外力，碰撞和关节的影响，而只受到动画以及附加在物体上的脚本影响，但是该物体仍然能改变其他物体运动状态</p>
+<ul>
+<li>Player<ul>
+<li>Rigibody 2D<ul>
+<li>Body Type: <code>Kinematic</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/04/Bomber-Man/Kinematic.png" class="" title="Kinematic 2D">
+
+<h4 id="给-Player-添加-Circle-Collider-2D"><a href="#给-Player-添加-Circle-Collider-2D" class="headerlink" title="给 Player 添加 Circle Collider 2D"></a>给 Player 添加 Circle Collider 2D</h4><ul>
+<li>Player<ul>
+<li>Circle Collider 2D<ul>
+<li>Is Trigger: <code>True</code></li>
+<li>Radius: <code>0.41</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/04/Bomber-Man/Circle_Collider_2D.png" class="" title="Circle Collider 2D">
+
+<h4 id="创建-PlayerScripts"><a href="#创建-PlayerScripts" class="headerlink" title="创建 PlayerScripts"></a>创建 PlayerScripts</h4><ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Create<ul>
+<li>Folder: <code>Scripts</code></li>
+</ul>
+</li>
+<li>Scripts<ul>
+<li>Create</li>
+<li>C# Script: <code>PlayerScript</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>添加 <code>PlayerScript</code> 到 <code>Player</code> 组件上。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PlayerScript</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> speed = <span class="number">10f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> minX = <span class="number">-2.55f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> maxX = <span class="number">2.55f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="comment">// Update is called once per frame</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        MovePlayer();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">MovePlayer</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">float</span> h = Input.GetAxis(<span class="string">"Horizontal"</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        Vector2 currentPosition = transform.position;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (h &gt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="comment">// going to the right side</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">            currentPosition.x += speed * Time.deltaTime;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (h &lt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="comment">// going to the left side</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">            currentPosition.x -= speed * Time.deltaTime;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (currentPosition.x &lt; minX)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            currentPosition.x = minX;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (currentPosition.x &gt; maxX)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            currentPosition.x = maxX;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.position = currentPosition;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/04/Bomber-Man/Player_Script.png" class="" title="Player Script">
+
+<p>运行游戏，使用 <code>AWDS</code> 中的 AD 或者使用 <code>左右方向键</code> 移动</p>
+<h3 id="添加-Bomb"><a href="#添加-Bomb" class="headerlink" title="添加 Bomb"></a>添加 Bomb</h3><ol>
+<li>从 <code>Project &gt; Sprites</code> 中拖动 <code>Bomb</code> 到 <code>GamePlay</code> Scene。</li>
+<li>添加 <code>Tag</code></li>
+<li>添加 <code>Rigibody 2D</code></li>
+<li>添加 <code>Circle Collider 2D</code></li>
+</ol>
+<ul>
+<li>Bomb<ul>
+<li>Tag: <code>Bomb</code></li>
+<li>Transform<ul>
+<li>Position<ul>
+<li>X: <code>0</code></li>
+<li>Y: <code>3.28</code></li>
+</ul>
+</li>
+<li>Scale<ul>
+<li>X: <code>0.8</code></li>
+<li>Y: <code>0.8</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rigibody 2D</li>
+<li>Circle Collider 2D<ul>
+<li>Is Trigger: <code>True</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/04/Bomber-Man/AddTag.png" class="" title="Add Tag">
+
+<img src="/2019/12/04/Bomber-Man/AddBombTag.png" class="" title="Add Bomb Tag">
+
+<img src="/2019/12/04/Bomber-Man/Bomb.png" class="" title="Bomb">
+
+<h3 id="Prefabs-预设体"><a href="#Prefabs-预设体" class="headerlink" title="Prefabs / 预设体"></a>Prefabs / 预设体</h3><ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Create<ul>
+<li>Folders: <code>Prefabs</code></li>
+</ul>
+</li>
+<li>Prefabs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>将 <code>Hirearchy &gt; GamePay &gt; Bomb</code> 拖到 <code>Prefabs</code> 中。</p>
+<p>删除 <code>Hirearchy &gt; GamePay &gt; Bomb</code>。</p>
+<img src="/2019/12/04/Bomber-Man/Prefabs.png" class="" title="Prefabs">
+
+<h3 id="Spawner-生成器"><a href="#Spawner-生成器" class="headerlink" title="Spawner / 生成器"></a>Spawner / 生成器</h3><ul>
+<li>Hirearchy<ul>
+<li>Create Empt<ul>
+<li>Rename: <code>Spawner</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Spawner<ul>
+<li>Select Icon （左上角)</li>
+<li>Transform: <code>Reset</code><ul>
+<li>Position<ul>
+<li>X: <code>0</code></li>
+<li>Y: <code>5.6</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="创建-SpawnerScripts"><a href="#创建-SpawnerScripts" class="headerlink" title="创建 SpawnerScripts"></a>创建 SpawnerScripts</h4><ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Scripts<ul>
+<li>Create</li>
+<li>C# Script: <code>SpawnerScripts</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>添加 <code>SpawnerScripts</code> 到 <code>Spawner</code> 组件上。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SpawnerScript</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> GameObject bombPrefab;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> minX = <span class="number">-2.55f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> maxX = <span class="number">2.55f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        StartCoroutine(SpawnBombs());</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function">IEnumerator <span class="title">SpawnBombs</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="function"><span class="keyword">yield</span> return new <span class="title">WaitForSeconds</span>(<span class="params">Random.Range(<span class="number">0f</span>, <span class="number">1f</span></span>))</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        Instantiate(bombPrefab, <span class="keyword">new</span> Vector2(Random.Range(minX, maxX), transform.position.y),</span></pre></td></tr><tr><td class="code"><pre><span class="line">            Quaternion.identity);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        StartCoroutine(SpawnBombs());</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>将 <code>Prefabs &gt; Bomb</code> 拖动到 <code>Hierarchy &gt; Spawner</code> 上。</p>
+<img src="/2019/12/04/Bomber-Man/Spawner.png" class="" title="Spawner">
+
+<h3 id="Collector-收集器"><a href="#Collector-收集器" class="headerlink" title="Collector / 收集器"></a>Collector / 收集器</h3><ul>
+<li>Hirearchy<ul>
+<li>Create Empt<ul>
+<li>Rename: <code>Collector</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Collector<ul>
+<li>Select Icon （左上角)</li>
+<li>Transform: <code>Reset</code><ul>
+<li>Position<ul>
+<li>X: <code>0</code></li>
+<li>Y: <code>-6.625</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Box Collider 2D<ul>
+<li>Is Trigger: <code>True</code></li>
+<li>Size<ul>
+<li>X: <code>7.4</code></li>
+<li>Y: <code>1</code></li>
+</ul>
+</li>
+<li>Info</li>
+<li>Bounds<ul>
+<li>Center<ul>
+<li>X: 0</li>
+<li>Y: -4.9</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="创建-CollectorScripts"><a href="#创建-CollectorScripts" class="headerlink" title="创建 CollectorScripts"></a>创建 CollectorScripts</h4><p><strong>Score Text</strong></p>
+<ul>
+<li>Hirearchy<ul>
+<li>Create<ul>
+<li>UI<ul>
+<li>Text</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Rect Transform<ul>
+<li>Archors<ul>
+<li>top</li>
+<li>left</li>
+</ul>
+</li>
+<li>Pos X: <code>125.5</code></li>
+<li>Pos Y: <code>125.5</code></li>
+<li>Width: <code>224</code></li>
+<li>Height: <code>50</code></li>
+</ul>
+</li>
+<li>Text(Script)<ul>
+<li>Text: <code>Score: 0</code></li>
+<li>Character<ul>
+<li>Font Size: <code>36</code></li>
+</ul>
+</li>
+<li>Paragraph<ul>
+<li>V: <code>Center</code></li>
+</ul>
+</li>
+<li>Color: <code>White</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Scripts<ul>
+<li>Create</li>
+<li>C# Script: <code>CollectorScripts</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>添加 <code>CollectorScripts</code> 到 <code>Collector</code> 组件上。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CollectorScript</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> Text scoreText;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> score;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnTriggerEnter2D</span>(<span class="params">Collider2D collision</span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (collision.tag == <span class="string">"Bomb"</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            IncreaseScore();</span></pre></td></tr><tr><td class="code"><pre><span class="line">            collision.gameObject.SetActive(<span class="literal">false</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">IncreaseScore</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        score++;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        scoreText.text = <span class="string">"Score: "</span> + score;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/04/Bomber-Man/Collector.png" class="" title="Collector">
+
+<h3 id="重置游戏"><a href="#重置游戏" class="headerlink" title="重置游戏"></a>重置游戏</h3><p><code>Score Text</code>:</p>
+<ul>
+<li><p>Inspector</p>
+<ul>
+<li>Rect Transform<ul>
+<li>Pos X: <code>180</code></li>
+<li>Pos Y: <code>-60</code></li>
+<li>Width: <code>300</code></li>
+<li>Height: <code>100</code></li>
+</ul>
+</li>
+<li>Text(Script)<ul>
+<li>Text: <code>High Score: 0\nScore: 0</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>修改 <code>CollectorScripts</code> 代码。</p>
+</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CollectorScript</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> Text scoreText;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> score;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> highScore;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        DisplayScore();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnTriggerEnter2D</span>(<span class="params">Collider2D collision</span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (collision.tag == <span class="string">"Bomb"</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            IncreaseScore();</span></pre></td></tr><tr><td class="code"><pre><span class="line">            collision.gameObject.SetActive(<span class="literal">false</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">DisplayScore</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        scoreText.text = <span class="string">"High Score: "</span> + highScore + <span class="string">"\nScore: "</span> + score;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">IncreaseScore</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        score++;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (score &gt; highScore)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            highScore = score;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        DisplayScore();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
+<li>File<ul>
+<li>Build Settings (Shift + Cmd + B)</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/04/Bomber-Man/Build_Settings.png" class="" title="Build Settings">
+
+<ul>
+<li>Player Settings <img src="/2019/12/04/Bomber-Man/Player_Settings.png" class="" title="Player Settings">
+
+</li>
+</ul>
+<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p><a href="https://github.com/GameDevLog/GameDevLog" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLog</a></p>
+]]></content>
       <categories>
-          
-          <category> Unity </category>
-          
+        <category>Unity</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Code </tag>
-            
-            <tag> Templete </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/11/29/hello-world/"/>
-      <url>/2019/11/29/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><a id="more"></a><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>Code</tag>
+        <tag>Basic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Game code Github Templete</title>
+    <url>/2019/12/03/Templete/</url>
+    <content><![CDATA[<h2 id="Unity-的-gitignore-设置"><a href="#Unity-的-gitignore-设置" class="headerlink" title="Unity 的 .gitignore 设置"></a>Unity 的 <code>.gitignore</code> 设置</h2><p>新建 GiHub 仓库：<a href="http://github.com/new" target="_blank" rel="noopener">http://github.com/new</a></p>
+<img src="/2019/12/03/Templete/GameDevLogTemplete.png" class="" title="[GameDevLogTemplete]">
+
+<a id="more"></a>
+
+<h2 id="配置-Unity-以进行版本控制"><a href="#配置-Unity-以进行版本控制" class="headerlink" title="配置 Unity 以进行版本控制"></a>配置 Unity 以进行版本控制</h2><ul>
+<li>打开编辑器设置窗口。<ul>
+<li><code>Edit &gt; Project Settings &gt; Editor</code></li>
+</ul>
+</li>
+<li>使<code>.meta</code>文件可见，以避免损坏的对象引用。<ul>
+<li><code>Version Control / Mode: “Visible Meta Files”</code></li>
+</ul>
+</li>
+<li>使用纯文本序列化可以避免无法解决的合并冲突。<ul>
+<li><code>Asset Serialization / Mode: “Force Text”</code></li>
+</ul>
+</li>
+<li>保存您的更改。<ul>
+<li><code>File &gt; Save Project</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="使用-Git-大文件存储"><a href="#使用-Git-大文件存储" class="headerlink" title="使用 Git 大文件存储"></a>使用 Git 大文件存储</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 3D models</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.3dm filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.3ds filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.blend filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.c4d filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.collada filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.dae filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.dxf filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.fbx filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.jas filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.lws filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.lxo filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.ma filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.max filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.mb filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.obj filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.ply filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.skp filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.stl filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.ztl filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"># Audio</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.aif filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.aiff filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.it filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.mod filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.mp3 filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.ogg filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.s3m filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.wav filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.xm filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"># Fonts</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.otf filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.ttf filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"># Images</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.bmp filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.exr filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.gif filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.hdr filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.iff filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.jpeg filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.jpg filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.pict filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.png filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.psd filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.tga filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.tif filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.tiff filter&#x3D;lfs diff&#x3D;lfs merge&#x3D;lfs -text</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"># Collapse Unity-generated files on GitHub</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.asset linguist-generated</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.mat linguist-generated</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.meta linguist-generated</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.prefab linguist-generated</span></pre></td></tr><tr><td class="code"><pre><span class="line">*.unity linguist-generated</span></pre></td></tr></table></figure>
+
+<h2 id="Commit-规范和格式化"><a href="#Commit-规范和格式化" class="headerlink" title="Commit 规范和格式化"></a>Commit 规范和格式化</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g commitizen cz-conventional-changelog</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'&#123; "path": "cz-conventional-changelog" &#125;'</span> &gt; ~/.czrc</span></pre></td></tr></table></figure>
+
+<p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Templete</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/11/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<a id="more"></a>
+
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
 </search>
