@@ -1,6 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Guess The Number / 猜数字</title>
+    <url>/2019/12/05/Guess-The-Number/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/GuessTheNumber.gif" alt="Guess The Number"></p>
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="创建-2D-游戏"><a href="#创建-2D-游戏" class="headerlink" title="创建 2D 游戏"></a>创建 2D 游戏</h3><p>略</p>
+<h3 id="设置分辨率-1280x720"><a href="#设置分辨率-1280x720" class="headerlink" title="设置分辨率 1280x720"></a>设置分辨率 1280x720</h3><img src="/2019/12/05/Guess-The-Number/Resolution.png" class="" title="Resolution">
+
+<h3 id="InputField"><a href="#InputField" class="headerlink" title="InputField"></a>InputField</h3><ul>
+<li>Hirearchy<ul>
+<li>Create<ul>
+<li>UI<ul>
+<li>InputField</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/Create_InputField.png" class="" title="Create_InputField">
+
+<ul>
+<li>Inspector<ul>
+<li>Rect Transform<ul>
+<li>Width: <code>700</code></li>
+<li>Height: <code>80</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/InputField.png" class="" title="InputField">
+
+<h4 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h4><ul>
+<li>Inspector<ul>
+<li>Canvas<ul>
+<li>Render Mode: <code>Screen Space - Camera</code></li>
+<li>Render Camera: <code>Main Camera</code></li>
+</ul>
+</li>
+<li>Canvas Scaler(Script)<ul>
+<li>UI Scale Mode: <code>Scale With Screen Size</code></li>
+<li>Reference Resolution<ul>
+<li>X: <code>1280</code></li>
+<li>Y: <code>720</code></li>
+</ul>
+</li>
+<li>Match: <code>0.5</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/Canvas.png" class="" title="Canvas">
+
+<h4 id="InputField-gt-Text"><a href="#InputField-gt-Text" class="headerlink" title="InputField &gt; Text"></a>InputField &gt; Text</h4><ul>
+<li>Inspector<ul>
+<li>Text(Script)<ul>
+<li>fontSize: <code>60</code></li>
+</ul>
+</li>
+<li>Paragraph<ul>
+<li>Alignment: <code>center</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4 id="InputField-gt-Placeholder"><a href="#InputField-gt-Placeholder" class="headerlink" title="InputField &gt; Placeholder"></a>InputField &gt; Placeholder</h4><ul>
+<li>Inspector<ul>
+<li>Text(Script)<ul>
+<li>Text: <code>Enter Your Guess</code></li>
+</ul>
+</li>
+<li>Paragraph<ul>
+<li>Alignment: <code>center</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/Placeholder.png" class="" title="Placeholder">
+
+<h3 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h3><ul>
+<li><p>Hirearchy</p>
+<ul>
+<li>Canvas<ul>
+<li>Create<ul>
+<li>Text</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Inspector</p>
+<ul>
+<li>Rect Transform<ul>
+<li>Pos X: 0</li>
+<li>Pos Y: <code>218</code></li>
+<li>Width: <code>700</code></li>
+<li>Height: <code>80</code></li>
+</ul>
+</li>
+<li>Text(Script)<ul>
+<li>Text: <code>Guess A Number Between 0 And 100</code></li>
+</ul>
+</li>
+<li>Paragraph<ul>
+<li>Alignment: <code>center</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4 id="Camera"><a href="#Camera" class="headerlink" title="Camera"></a>Camera</h4><ul>
+<li>Inspector<ul>
+<li>Camera<ul>
+<li>Background: <code>Black</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/MainCamera.png" class="" title="Main Camera">
+
+<img src="/2019/12/05/Guess-The-Number/Input.png" class="" title="Input">
+
+<h3 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h3><ul>
+<li><p>Hirearchy</p>
+<ul>
+<li>Canvas<ul>
+<li>Create<ul>
+<li>Text</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Inspector</p>
+<ul>
+<li>Text(Script)<ul>
+<li>Text: <code>Guess</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Button-gt-Text"><a href="#Button-gt-Text" class="headerlink" title="Button -&gt; Text"></a>Button -&gt; Text</h4><ul>
+<li>Inspector<ul>
+<li>Rect Transform<ul>
+<li>Pos X: 0</li>
+<li>Pos Y: <code>-162</code></li>
+<li>Width: <code>300</code></li>
+<li>Height: <code>108</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/Button.png" class="" title="Button">
+
+<h3 id="GuessTheNumberScript"><a href="#GuessTheNumberScript" class="headerlink" title="GuessTheNumberScript"></a>GuessTheNumberScript</h3><ul>
+<li>Project<ul>
+<li>Create <ul>
+<li>Folder: <code>Scripts</code></li>
+</ul>
+</li>
+<li>Scripts<ul>
+<li>Create<ul>
+<li>C# Script: <code>GuessTheNumberScript</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/GuessTheNumberScript.png" class="" title="GuessTheNumberScript">
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GuessTheNumberScript</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> InputField input;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> Text infoText;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> guessNumber;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> userGuessNumber;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        guessNumber = Random.Range(<span class="number">0</span>, <span class="number">100</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">CheckGuess</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        userGuessNumber = <span class="keyword">int</span>.Parse(input.text);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (userGuessNumber == guessNumber)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            infoText.text = <span class="string">"You Guessed The Number! You Are A Wizard"</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (userGuessNumber &gt; guessNumber)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            infoText.text = <span class="string">"Your Number Is Greater Than The Guess Number"</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">else</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            infoText.text = <span class="string">"Your Number Is Lower Than The Guess Number"</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        input.text = <span class="string">""</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="GameController"><a href="#GameController" class="headerlink" title="GameController"></a>GameController</h3><ul>
+<li>Hirearchy<ul>
+<li>Create Empty<ul>
+<li>reanem: <code>GameController</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>添加 <code>GuessTheNumberScript</code> 到 <code>GameController</code></p>
+<img src="/2019/12/05/Guess-The-Number/GameController.png" class="" title="Game Controller">
+
+<h3 id="On-Click"><a href="#On-Click" class="headerlink" title="On Click"></a>On Click</h3><p>Button</p>
+<ul>
+<li>Inspector<ul>
+<li>On Click()<ul>
+<li>添加: <code>GameController</code><ul>
+<li>选择： <code>GuessTheNumberScript.CheckGuess</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/OnClick.png" class="" title="Button On Click">
+
+<h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
+<li>File<ul>
+<li>Build Settings (Shift + Cmd + B)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://game.iosdevlog.com/2019/12/04/Bomber-Man/Build_Settings.png" alt="Build Settings"></p>
+<ul>
+<li>Player Settings </li>
+</ul>
+<img src="/2019/12/05/Guess-The-Number/Player_Settings.png" class="" title="Player Settings">
+
+<h2 id="GitHub-源码"><a href="#GitHub-源码" class="headerlink" title="GitHub 源码"></a>GitHub 源码</h2><p><a href="https://github.com/GameDevLog/GameDevLog" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLog</a></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Design</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bomber Man / 炸弹人</title>
     <url>/2019/12/04/Bomber-Man/</url>
     <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://github.com/GameDevLog/GameDevLogTemplete/raw/master/ScreenShots/BomberMan.gif" alt="Bomber Man"></p>
@@ -12,9 +250,9 @@
 <h3 id="导入资源"><a href="#导入资源" class="headerlink" title="导入资源"></a>导入资源</h3><p>可以从 GitHub 上面查看到。</p>
 <img src="/2019/12/04/Bomber-Man/Assets_Sprites.png" class="" title="import Sprites Assets">
 
-<h3 id="设置分辨率-400x800"><a href="#设置分辨率-400x800" class="headerlink" title="设置分辨率 400x800"></a>设置分辨率 400x800</h3><p>从 <code>Project &gt; Sprites</code> 中拖动 <code>BG</code> 到 <code>GamePlay</code> Scene。</p>
-<img src="/2019/12/04/Bomber-Man/Resolution_400_800.png" class="" title="Resolution 400x800">
+<h3 id="设置分辨率-400x800"><a href="#设置分辨率-400x800" class="headerlink" title="设置分辨率 400x800"></a>设置分辨率 400x800</h3><img src="/2019/12/04/Bomber-Man/Resolution_400_800.png" class="" title="Resolution 400x800">
 
+<p>从 <code>Project &gt; Sprites</code> 中拖动 <code>BG</code> 到 <code>GamePlay</code> Scene。</p>
 <h3 id="添加背景"><a href="#添加背景" class="headerlink" title="添加背景"></a>添加背景</h3><ul>
 <li>BG<ul>
 <li>Transform<ul>
