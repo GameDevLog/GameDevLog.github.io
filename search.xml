@@ -1,9 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Box Tower</title>
+    <url>/2019/12/06/Box-Tower/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/3.BoxTower.gif" alt="Box Tower"></p>
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="创建-2D-游戏"><a href="#创建-2D-游戏" class="headerlink" title="创建 2D 游戏"></a>创建 2D 游戏</h3><p>略</p>
+<h3 id="设置分辨率-480x800"><a href="#设置分辨率-480x800" class="headerlink" title="设置分辨率 480x800"></a>设置分辨率 480x800</h3><p>略</p>
+<h3 id="导入资源"><a href="#导入资源" class="headerlink" title="导入资源"></a>导入资源</h3><p>略</p>
+<h3 id="Box-箱子"><a href="#Box-箱子" class="headerlink" title="Box / 箱子"></a>Box / 箱子</h3><p>从 <strong>Project</strong> 拖动 <em>Box</em> 资源到 <strong>Hierarchy</strong></p>
+<ul>
+<li>Inspector<ul>
+<li>Rect Transform: reset(图片没有 reset)<ul>
+<li>Scale<ul>
+<li>X: <code>0.2</code></li>
+<li>Y: <code>0.2</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/Box.png" class="" title="Box">
+
+<h3 id="BG-背景"><a href="#BG-背景" class="headerlink" title="BG / 背景"></a>BG / 背景</h3><p>从 <strong>Project</strong> 拖动 <em>Box</em> 资源到 <strong>Hierarchy &gt; Main Camera</strong></p>
+
+
+<h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><p>选中 <code>Box</code>, 添加 3 种 <code>Tag</code></p>
+<ol>
+<li>Box</li>
+<li>Platform</li>
+<li>Game Over</li>
+</ol>
+<img src="/2019/12/06/Box-Tower/Tags.png" class="" title="Tags">
+
+<p>为 <code>Box</code> 添加 Tag: <em>Box</em></p>
+<img src="/2019/12/06/Box-Tower/Box_Tag.png" class="" title="Box Tag">
+
+<h3 id="添加-Box-Collider-2D"><a href="#添加-Box-Collider-2D" class="headerlink" title="添加 Box Collider 2D"></a>添加 Box Collider 2D</h3><ul>
+<li>Inspector<ul>
+<li>Box Collider 2D<ul>
+<li>Size<ul>
+<li>X: <code>4.85</code></li>
+<li>Y: <code>4.85</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/Box_Collider_2D.png" class="" title="Box Collider 2D">
+
+<h3 id="添加-RigidBody-2D"><a href="#添加-RigidBody-2D" class="headerlink" title="添加 RigidBody 2D"></a>添加 RigidBody 2D</h3><ul>
+<li>Inspector<ul>
+<li>RigidBody 2D<ul>
+<li>Size<ul>
+<li>Mess: <code>1</code></li>
+<li>Linear Drag: <code>2</code></li>
+<li>Angular Drag: <code>3</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/Box_RigidBody_2D.png" class="" title="Box RigidBody 2D">
+
+<h3 id="Game-Over"><a href="#Game-Over" class="headerlink" title="Game Over"></a>Game Over</h3><ul>
+<li>Hirearchy<ul>
+<li>Main Camera<ul>
+<li>Create Empty: <code>Game Over</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tag: <code>Game Over</code></li>
+<li>Rect Transform<ul>
+<li>Position<ul>
+<li>Y: <code>-5.18</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Box Collider 2D<ul>
+<li>Is Trigger: <code>True</code></li>
+<li>Size<ul>
+<li>X: <code>26</code></li>
+<li>Y: <code>0.15</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/GameOver.png" class="" title="Box Game Over">
+
+<h3 id="Box-Spawner-箱子生成器"><a href="#Box-Spawner-箱子生成器" class="headerlink" title="Box Spawner / 箱子生成器"></a>Box Spawner / 箱子生成器</h3><ul>
+<li>Hirearchy<ul>
+<li>Main Camera<ul>
+<li>Create Empty: <code>Box Spawner</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Rect Transform<ul>
+<li>Position<ul>
+<li>Y: <code>3.7</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/Box_Spawner.png" class="" title="Box Box Spawner">
+
+<h3 id="Platform-Holder"><a href="#Platform-Holder" class="headerlink" title="Platform Holder"></a>Platform Holder</h3><p>从 <strong>Project</strong> 拖动 <em>Box</em> 资源到 <strong>Hierarchy</strong>，重命名为：<code>Platform Holder</code></p>
+<ul>
+<li>Inspector<ul>
+<li>Tag: <code>Game Over</code></li>
+<li>Rect Transform<ul>
+<li>Position<ul>
+<li>Y: <code>-4.8</code></li>
+</ul>
+</li>
+<li>Scale<ul>
+<li>X: <code>0.7</code></li>
+<li>Y: <code>0.07</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add Component += <code>Box Collider 2D</code></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/Platform_Holder.png" class="" title="Box Platform Holder">
+
+<h3 id="Prefabs"><a href="#Prefabs" class="headerlink" title="Prefabs"></a>Prefabs</h3><p>创建新文件夹，<code>Prefabs</code></p>
+<ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Create<ul>
+<li>Folder: <code>Prefabs</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>从 <strong>Hierarchy</strong> 拖动 <em>Box</em> 到 <strong>Prefabs</strong></p>
+<p>删除  <code>Hierarchy &gt; Box</code></p>
+<img src="/2019/12/06/Box-Tower/Box_Prefabs.png" class="" title="Box Box Prefabs">
+
+<h3 id="Scripts"><a href="#Scripts" class="headerlink" title="Scripts"></a>Scripts</h3><p>创建新文件夹，<code>Scripts</code></p>
+<ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Create<ul>
+<li>Folder: <code>Scripts</code></li>
+</ul>
+</li>
+<li>Scripts<ul>
+<li>Create<ul>
+<li>C# Script<ul>
+<li><code>BoxScript</code></li>
+<li><code>GameplayController</code></li>
+<li><code>BoxSwapner</code></li>
+<li><code>CameraFollow</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>附加脚本</p>
+<ul>
+<li>Hierarchy<ul>
+<li>Main Camera += <code>CameraFollow</code><ul>
+<li>Box Swapner += <code>BoxSwapner</code></li>
+</ul>
+</li>
+<li>Create: <code>Gameplay Controller</code></li>
+<li>Gameplay Controller += <code>GameplayController</code></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/Scripts.png" class="" title="Scripts">
+
+<ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Prefabs<ul>
+<li>Box -&gt; <code>Inspector</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Open Prefabs<pre><code>* Add Component += `BoxScript`</code></pre></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/BoxScript.png" class="" title="Box Scripts">
+
+<h4 id="BoxSwapner-Script"><a href="#BoxSwapner-Script" class="headerlink" title="BoxSwapner Script"></a>BoxSwapner Script</h4><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">BoxSwapner</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> GameObject boxPrefabs;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        SwapBox();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SwapBox</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        GameObject boxObject = Instantiate(boxPrefabs);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        boxObject.transform.position = transform.position;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/06/Box-Tower/BoxSpawner_Script.png" class="" title="BoxSpawner Script">
+
+<h3 id="Game-Controller"><a href="#Game-Controller" class="headerlink" title="Game Controller"></a>Game Controller</h3><p>删除 <em>BoxSwapner Script</em> 中的 <code>Start()</code></p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">diff --git a/Box-Tower/Assets/Scripts/BoxSwapner.cs b/Box-Tower/Assets/Scripts/BoxSwapner.cs</span></pre></td></tr><tr><td class="code"><pre><span class="line">index 66f02dc..102da62 100644</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">--- a/Box-Tower/Assets/Scripts/BoxSwapner.cs</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">+++ b/Box-Tower/Assets/Scripts/BoxSwapner.cs</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">@@ -6,11 +6,6 @@ public class BoxSwapner : MonoBehaviour</span></pre></td></tr><tr><td class="code"><pre><span class="line"> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">     public GameObject boxPrefabs;</span></pre></td></tr><tr><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="deletion">-    void Start()</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="deletion">-    &#123;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="deletion">-        SwapBox();</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="deletion">-    &#125;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">     public void SwapBox()</span></pre></td></tr><tr><td class="code"><pre><span class="line">     &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">         GameObject boxObject = Instantiate(boxPrefabs);</span></pre></td></tr></table></figure>
+
+<p><code>BoxScript.cs</code></p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">BoxScript</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> minX = <span class="number">-2.2f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> maxX = <span class="number">2.2f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> canMove;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> speed = <span class="number">2f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> Rigidbody2D myBody;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> gameOver;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> ignoreCollision;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> ignoreTrigger;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Awake</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        myBody = GetComponent&lt;Rigidbody2D&gt;();</span></pre></td></tr><tr><td class="code"><pre><span class="line">        myBody.gravityScale = <span class="number">0f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        canMove = <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Random.Range(<span class="number">0</span>, <span class="number">2</span>) &gt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            speed *= <span class="number">-1f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        GameplayController.instance.currentBox = <span class="keyword">this</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="comment">// Update is called once per frame</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        MoveBox();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">MoveBox</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (canMove)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            Vector3 temp = transform.position;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            temp.x += speed * Time.deltaTime;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">if</span> (temp.x &gt; maxX)</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                speed *= <span class="number">-1f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (temp.x &lt; minX)</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                speed *= <span class="number">-1f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">            transform.position = temp;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p><code>GameplayController.cs</code></p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GameplayController</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> GameplayController instance;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> BoxSwapner boxSwapner;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    [<span class="meta">HideInInspector</span>]</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> BoxScript currentBox;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> CameraFollow cameraScript;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> moveCount;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Awake</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (instance == <span class="literal">null</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            instance = <span class="keyword">this</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        boxSwapner.SpawnBox();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<blockquote>
+<p>效果：箱子可以左右来回的移动</p>
+</blockquote>
+<img src="/2019/12/06/Box-Tower/PingPong.png" class="" title="Ping Pong">
+
+<h2 id="完善代码"><a href="#完善代码" class="headerlink" title="完善代码"></a>完善代码</h2><p>具体代码请查看 <a href="https://github.com/GameDevLog/GameDevLog" target="_blank" rel="noopener">GitHub</a></p>
+<img src="/2019/12/06/Box-Tower/Finish.png" class="" title="Finish">
+
+<h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
+<li>File<ul>
+<li>Build Settings (Shift + Cmd + B)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://game.iosdevlog.com/2019/12/04/Bomber-Man/Build_Settings.png" alt="Build Settings"></p>
+<ul>
+<li>Player Settings</li>
+</ul>
+<img src="/2019/12/06/Box-Tower/Player_Settings.png" class="" title="Player Settings">
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>两个物体 A,B 两者都有碰撞体 collider（Box Collider，Sphere Collider，Capsule Collider 等）当两物体相撞时，会进入 <code>OnTriggerEnter()</code> 和 <code>OnCollisionEnter()</code> 中的哪一个呢？</p>
+<ol>
+<li>只会进入一个，A 和 B 的脚本只会进入同一个</li>
+<li>A 或者 B collider 有一个勾选 isTrigger 或者两者都勾选 <code>isTrigger</code> A 和 B都可以进入 <code>OnTriggerEnter()</code> 方法，但是不可进入OnCollisionEnter方法。</li>
+<li>A 和 B collider 都不勾选 isTrigger，A 和 B 能进入 <code>OnCollisionEnter()</code> 方法但是不能进入 <code>OnTriggerEnter()</code> 方法。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>A isTrigger</th>
+<th>B isTrigger</th>
+<th>OnCollisionEnter</th>
+<th>OnTriggerEnter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td>✅</td>
+<td></td>
+<td></td>
+<td>✅</td>
+</tr>
+<tr>
+<td></td>
+<td>✅</td>
+<td></td>
+<td>✅</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<h2 id="GitHub-源码"><a href="#GitHub-源码" class="headerlink" title="GitHub 源码"></a>GitHub 源码</h2><p><a href="https://github.com/GameDevLog/GameDevLog" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLog</a></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Design</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Guess The Number / 猜数字</title>
     <url>/2019/12/05/Guess-The-Number/</url>
-    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/GuessTheNumber.gif" alt="Guess The Number"></p>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/2.GuessTheNumber.gif" alt="Guess The Number"></p>
 <a id="more"></a>
 
 <h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="创建-2D-游戏"><a href="#创建-2D-游戏" class="headerlink" title="创建 2D 游戏"></a>创建 2D 游戏</h3><p>略</p>
@@ -191,10 +493,7 @@
 
 <h3 id="GameController"><a href="#GameController" class="headerlink" title="GameController"></a>GameController</h3><ul>
 <li>Hirearchy<ul>
-<li>Create Empty<ul>
-<li>reanem: <code>GameController</code></li>
-</ul>
-</li>
+<li>Create Empty: <code>GameController</code></li>
 </ul>
 </li>
 </ul>
@@ -241,7 +540,7 @@
   <entry>
     <title>Bomber Man / 炸弹人</title>
     <url>/2019/12/04/Bomber-Man/</url>
-    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://github.com/GameDevLog/GameDevLogTemplete/raw/master/ScreenShots/BomberMan.gif" alt="Bomber Man"></p>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://github.com/GameDevLog/GameDevLogTemplete/raw/master/ScreenShots/1.BomberMan.gif" alt="Bomber Man"></p>
 <a id="more"></a>
 
 <p><img src="https://github.com/GameDevLog/BomberMan/raw/master/Screenshots/BomberMan.png" alt="Bomber Man"></p>
@@ -405,10 +704,7 @@
 
 <h3 id="Spawner-生成器"><a href="#Spawner-生成器" class="headerlink" title="Spawner / 生成器"></a>Spawner / 生成器</h3><ul>
 <li>Hirearchy<ul>
-<li>Create Empt<ul>
-<li>Rename: <code>Spawner</code></li>
-</ul>
-</li>
+<li>Create Empty: <code>Spawner</code></li>
 </ul>
 </li>
 <li>Inspector<ul>
@@ -448,10 +744,7 @@
 
 <h3 id="Collector-收集器"><a href="#Collector-收集器" class="headerlink" title="Collector / 收集器"></a>Collector / 收集器</h3><ul>
 <li>Hirearchy<ul>
-<li>Create Empt<ul>
-<li>Rename: <code>Collector</code></li>
-</ul>
-</li>
+<li>Create Empty: <code>Collector</code></li>
 </ul>
 </li>
 <li>Inspector<ul>
