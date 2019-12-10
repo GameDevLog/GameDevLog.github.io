@@ -1,6 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexagon</title>
+    <url>/2019/12/10/Hexagon/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/5.Hexagon.gif" alt="Hexagon"></p>
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="创建-2D-游戏"><a href="#创建-2D-游戏" class="headerlink" title="创建 2D 游戏"></a>创建 2D 游戏</h3><p>略</p>
+<h3 id="Main-Camera"><a href="#Main-Camera" class="headerlink" title="Main Camera"></a>Main Camera</h3><ul>
+<li>Inspector<ul>
+<li>Camera<ul>
+<li>Background: <code>red</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="New-Sprite"><a href="#New-Sprite" class="headerlink" title="New Sprite"></a>New Sprite</h3><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>Sprite: <code>Home</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Transform: reset<ul>
+<li>Scale<ul>
+<li>Y: <code>3.8</code></li>
+<li>X: <code>3.8</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sprite Renderer<ul>
+<li>Sprite: <code>Knob</code></li>
+<li>Color: <code>black</code> alpha: 40 #00000028</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Player"><a href="#Player" class="headerlink" title="Player"></a>Player</h3><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>Sprite: <code>Player</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Transform: reset<ul>
+<li>Position<ul>
+<li>Y: <code>0.6</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sprite Renderer<ul>
+<li>Sprite: <code>Knob</code></li>
+</ul>
+</li>
+<li>Rigidbody 2D<ul>
+<li>Body Type<ul>
+<li>Kinematic</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Circle Collider 2D<ul>
+<li>Is Trigger: <code>True</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Script"><a href="#Script" class="headerlink" title="Script"></a>Script</h3><h4 id="Player-cs"><a href="#Player-cs" class="headerlink" title="Player.cs"></a>Player.cs</h4><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Player</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> moveSpeed = <span class="number">600f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> movement;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        movement = Input.GetAxis(<span class="string">"Horizontal"</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">FixedUpdate</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.RotateAround(Vector3.zero, Vector3.back, movement * Time.fixedDeltaTime * moveSpeed);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/10/Hexagon/Player.png" class="" title="Player">
+
+<h3 id="Hexagon"><a href="#Hexagon" class="headerlink" title="Hexagon"></a>Hexagon</h3><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>Effects<ul>
+<li>Line: <code>Hexagon</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Position<ul>
+<li>Size: <code>6</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>X</th>
+<th>Y</th>
+<th>Z</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>-0.5</td>
+<td>0.8</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-0.95</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-0.5</td>
+<td>-0.8</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.5</td>
+<td>-0.8</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.95</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.5</td>
+<td>0.8</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<img src="/2019/12/10/Hexagon/Hexagon.png" class="" title="Hexagon">
+
+<h4 id="Collider"><a href="#Collider" class="headerlink" title="Collider"></a>Collider</h4><ul>
+<li>Hierarchy<ul>
+<li>Hexagon<ul>
+<li>Create<ul>
+<li>Empty: <code>Collider</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Edge Collider 2D<ul>
+<li>Position<ul>
+<li>Size: <code>6</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>-0.5</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-0.95</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-0.5</td>
+<td>-0.8</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.5</td>
+<td>-0.8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.95</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.5</td>
+<td>0.8</td>
+</tr>
+</tbody></table>
+<h3 id="Hexagon-cs"><a href="#Hexagon-cs" class="headerlink" title="Hexagon.cs"></a>Hexagon.cs</h3><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Hexagon</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> Rigidbody2D rb;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> shrinkSpeed = <span class="number">3f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        rb.rotation = Random.Range(<span class="number">0f</span>, <span class="number">360f</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.localScale = Vector3.one * <span class="number">10f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (transform.localScale.x &lt; <span class="number">0.05f</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            Destroy(gameObject);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="Frefabs-预置体"><a href="#Frefabs-预置体" class="headerlink" title="Frefabs / 预置体"></a>Frefabs / 预置体</h3><p>将 <code>Hexagon</code> 作成 <code>Frefabs</code></p>
+<h3 id="Spawner-生成器"><a href="#Spawner-生成器" class="headerlink" title="Spawner / 生成器"></a>Spawner / 生成器</h3><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>Empty: <code>Spawner</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Spawner</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> spawnRate = <span class="number">1f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> GameObject hexoagonPrefab;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> nextTimeToSpawn;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Time.time &gt;= nextTimeToSpawn)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            Instantiate(hexoagonPrefab, Vector3.zero, Quaternion.identity);</span></pre></td></tr><tr><td class="code"><pre><span class="line">            nextTimeToSpawn = Time.time + <span class="number">1f</span> / spawnRate;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="Restart-重玩"><a href="#Restart-重玩" class="headerlink" title="Restart / 重玩"></a>Restart / 重玩</h3><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">diff --git a/Assets/Scripts/Player.cs b/Assets/Scripts/Player.cs</span></pre></td></tr><tr><td class="code"><pre><span class="line">index 5887c5c..723bbc4 100644</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">--- a/Assets/Scripts/Player.cs</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">+++ b/Assets/Scripts/Player.cs</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">@@ -1,4 +1,5 @@</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"> &lt;U+FEFF&gt;using UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="addition">+using UnityEngine.SceneManagement;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="code"><pre><span class="line"> public class Player : MonoBehaviour</span></pre></td></tr><tr><td class="code"><pre><span class="line"> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">@@ -14,4 +15,9 @@ public class Player : MonoBehaviour</span></pre></td></tr><tr><td class="code"><pre><span class="line">     &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">         transform.RotateAround(Vector3.zero, Vector3.back, movement * Time.fixedDeltaTime * moveSpeed);</span></pre></td></tr><tr><td class="code"><pre><span class="line">     &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="addition">+</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="addition">+    private void OnTriggerEnter2D(Collider2D collision)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="addition">+    &#123;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="addition">+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="addition">+    &#125;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"> &#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/10/Hexagon/Edge_Collider.png" class="" title="Edge_Collider">
+
+<h3 id="Camera-rotate"><a href="#Camera-rotate" class="headerlink" title="Camera rotate"></a>Camera rotate</h3> <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Rotator</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.Rotate(Vector3.forward, Time.deltaTime * <span class="number">30f</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/10/Hexagon/Rotator.png" class="" title="Rotator">
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>Dynamic</li>
+<li>Static 不移动</li>
+<li>kinematic 运动的, 不受重力影响</li>
+</ul>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Design</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Type Game / 打字游戏</title>
     <url>/2019/12/09/Type-Game/</url>
     <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/4.TypeGame.gif" alt="Type Game"></p>
@@ -127,7 +369,8 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine.SceneManagement;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GameController</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> life;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> GameController instance;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> score; </span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> highScore;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> GUISkin skin;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> esc;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        Time.timeScale = <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="comment">//life = 10;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">        instance = <span class="keyword">this</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        highScore = PlayerPrefs.GetInt(<span class="string">"HiScore"</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        esc |= Input.GetKeyDown(KeyCode.Escape);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnTriggerEnter2D</span>(<span class="params">Collider2D collision</span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        Debug.Log(<span class="string">"OnTriggerEnter2D"</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (collision.CompareTag(<span class="string">"Word"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">if</span> (life &gt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                life -= <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                WordSwapner.instance.midBreak = <span class="number">-1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                Destroy(collision.gameObject);</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnTriggerEnter</span>(<span class="params">Collider other</span>)        </span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (other.CompareTag(<span class="string">"Word"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;   </span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">if</span> (life &gt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                life -= <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                WordSwapner.instance.midBreak = <span class="number">-1</span>;   </span></pre></td></tr><tr><td class="code"><pre><span class="line">                Destroy(other.gameObject);</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnGUI</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        GUI.skin = skin;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        GUI.Label(<span class="keyword">new</span> Rect(<span class="number">20</span>, <span class="number">20</span>, <span class="number">300</span>, <span class="number">100</span>), <span class="string">"High Score: "</span> + highScore);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        GUI.Label(<span class="keyword">new</span> Rect(Screen.width - <span class="number">220</span>, <span class="number">20</span>, <span class="number">200</span>, <span class="number">100</span>), <span class="string">"Score: "</span> + score);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        GUI.Label(<span class="keyword">new</span> Rect(Screen.width - <span class="number">220</span>, Screen.height - <span class="number">120</span>, <span class="number">200</span>, <span class="number">100</span>), <span class="string">"Life："</span> + life);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (esc &amp;&amp; life != <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            Time.timeScale = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">200</span>, Screen.height / <span class="number">2</span> - <span class="number">50</span>, <span class="number">200</span>, <span class="number">100</span>), <span class="string">"Resume"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                esc = <span class="literal">false</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                Time.timeScale = <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (life == <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            esc = <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            Time.timeScale = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">if</span> (score &gt; highScore)</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                PlayerPrefs.SetInt(<span class="string">"HiScore"</span>, highScore);</span></pre></td></tr><tr><td class="code"><pre><span class="line">                GUI.Label(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">200</span>, Screen.height / <span class="number">2</span> - <span class="number">300</span>, <span class="number">400</span>, <span class="number">100</span>), <span class="string">"Awesome!"</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">200</span>, Screen.height / <span class="number">2</span> - <span class="number">50</span>, <span class="number">400</span>, <span class="number">100</span>), <span class="string">"Restart"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                RestartGame();</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">200</span>, Screen.height / <span class="number">2</span> + <span class="number">100</span>, <span class="number">400</span>, <span class="number">100</span>), <span class="string">"Quit"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">                Application.Quit();</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">RestartGame</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        SceneManager.LoadScene(</span></pre></td></tr><tr><td class="code"><pre><span class="line">            SceneManager.GetActiveScene().name);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>2D 游戏的制作可以参照之前的 <a href="https://game.iosdevlog.com/2019/12/06/Box-Tower/">《Box Tower / 堆箱塔》</a>，也可以用 3D 实现 2D 效果。</p>
-<h2 id="GitHub-源码"><a href="#GitHub-源码" class="headerlink" title="GitHub 源码"></a>GitHub 源码</h2><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
 ]]></content>
       <categories>
         <category>Unity</category>
@@ -429,7 +672,8 @@
 <td>✅</td>
 </tr>
 </tbody></table>
-<h2 id="GitHub-源码"><a href="#GitHub-源码" class="headerlink" title="GitHub 源码"></a>GitHub 源码</h2><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
 ]]></content>
       <categories>
         <category>Unity</category>
@@ -664,7 +908,8 @@
 </ul>
 <img src="/2019/12/05/Guess-The-Number/Player_Settings.png" class="" title="Player Settings">
 
-<h2 id="GitHub-源码"><a href="#GitHub-源码" class="headerlink" title="GitHub 源码"></a>GitHub 源码</h2><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
 ]]></content>
       <categories>
         <category>Unity</category>
@@ -1014,7 +1259,8 @@
 
 </li>
 </ul>
-<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
 ]]></content>
       <categories>
         <category>Unity</category>
@@ -1054,7 +1300,8 @@
 
 <h2 id="Commit-规范和格式化"><a href="#Commit-规范和格式化" class="headerlink" title="Commit 规范和格式化"></a>Commit 规范和格式化</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g commitizen cz-conventional-changelog</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'&#123; "path": "cz-conventional-changelog" &#125;'</span> &gt; ~/.czrc</span></pre></td></tr></table></figure>
 
-<p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
 ]]></content>
       <categories>
         <category>Unity</category>
