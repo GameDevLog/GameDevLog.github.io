@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16-next.png?v=5.1.4">
+
+
+
+  <link rel="manifest" href="/manifest.json">
+
+
+
+
+  <meta name="keywords" content="Code,Design," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="游戏展示">
+<meta name="keywords" content="Code,Design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sunny Land &#x2F; Unity 资源">
+<meta property="og:url" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;index.html">
+<meta property="og:site_name" content="GameDevLog">
+<meta property="og:description" content="游戏展示">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;GameDevLog&#x2F;GameDevLogTemplete&#x2F;master&#x2F;ScreenShots&#x2F;6.SunnyLand.gif">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Sunny_Land_Assets.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Background.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Tile_Palette.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Create_new_Palette.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Sprite_Editor.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Slice.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Tileset.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Draw_Map.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Main_Camera_Size.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Sorting_Layer.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Change_Layer.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Player_Box_Collider_2D.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Animation.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Animator.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Circle_Collider_2D.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Cinemachine.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;2D_Camera.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;CM_vcam.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Circle_Collider_2D.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Bounding_Shape_2D.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Cherry_Animation.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Physics_Material_2D.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Text_Archors.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Hurt.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;Bomber-Man&#x2F;Build_Settings.png">
+<meta property="og:updated_time" content="2019-12-13T12:52:45.570Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;GameDevLog&#x2F;GameDevLogTemplete&#x2F;master&#x2F;ScreenShots&#x2F;6.SunnyLand.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://game.iosdevlog.com/2019/12/11/Sunny-Land/"/>
+
+
+
+
+
+  <title>Sunny Land / Unity 资源 | GameDevLog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GameDevLog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">游戏开发日志</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://game.iosdevlog.com/2019/12/11/Sunny-Land/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="iOSDevLog">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://2019.iosdevlog.com/uploads/iOSDevLog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GameDevLog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Sunny Land / Unity 资源</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-11T19:04:52+08:00">
+                2019-12-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-12-13T20:52:45+08:00">
+                2019-12-13
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/6.SunnyLand.gif" alt="Sunny Land"></p>
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="创建-2D-游戏"><a href="#创建-2D-游戏" class="headerlink" title="创建 2D 游戏"></a>创建 2D 游戏</h3><p>略</p>
+<h3 id="Import-Assets-导入资源"><a href="#Import-Assets-导入资源" class="headerlink" title="Import Assets / 导入资源"></a>Import Assets / 导入资源</h3><p><a href="https://assetstore.unity.com/packages/2d/characters/sunny-land-103349" target="_blank" rel="noopener">Sunny Land</a></p>
+<img src="/2019/12/11/Sunny-Land/Sunny_Land_Assets.png" class="" title="Sunny Land Assets">
+
+<h3 id="Background-背景"><a href="#Background-背景" class="headerlink" title="Background / 背景"></a>Background / 背景</h3><p>每单元像素改为 <code>16</code>，<em>以下所有资源做相同操作</em>。</p>
+<ul>
+<li><p>Project</p>
+<ul>
+<li>Sunnyland<ul>
+<li>artwork<ul>
+<li>Environment<ul>
+<li>back</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Inspector</p>
+<ul>
+<li>Sprite Mode<ul>
+<li>Pixels Per Unit: <code>16</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>back -&gt; Hierarchy</p>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Background.png" class="" title="Background">
+
+<h3 id="Tilemap-瓦片地图"><a href="#Tilemap-瓦片地图" class="headerlink" title="Tilemap / 瓦片地图"></a>Tilemap / 瓦片地图</h3><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>2D Object<ul>
+<li>Tilemap</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Window<ul>
+<li>2D<ul>
+<li>Tile palette</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tile palette<ul>
+<li>Create New Palette</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Tile_Palette.png" class="" title="Tile Palette Window">
+
+<img src="/2019/12/11/Sunny-Land/Create_new_Palette.png" class="" title="Create new Palette">       
+
+<ul>
+<li>Project<ul>
+<li>Sunnyland<ul>
+<li>artwork<ul>
+<li>Environment<ul>
+<li>tileset</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Sprite Mode: <code>Multiple</code><ul>
+<li>Pixels Per Unit: <code>16</code></li>
+</ul>
+</li>
+<li>Apply</li>
+<li>Sprite Editor</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Sprite_Editor.png" class="" title="Sprite Editor">
+
+<ul>
+<li>Sprite Editor<ul>
+<li>Slice<ul>
+<li>Type: <code>Grid By Cell Size</code></li>
+<li>Pixel Size<ul>
+<li>X: <code>16</code></li>
+<li>Y: <code>16</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Apply</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Slice.png" class="" title="Create Slice">
+
+<ul>
+<li>Project<ul>
+<li>Sunnyland<ul>
+<li>artwork<ul>
+<li>Environment<ul>
+<li>tileset -&gt; <code>Tile Palette</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Tileset.png" class="" title="Tileset">
+
+<img src="/2019/12/11/Sunny-Land/Draw_Map.png" class="" title="Draw Map">
+
+<h3 id="Main-Camera-Size-调整相机尺寸"><a href="#Main-Camera-Size-调整相机尺寸" class="headerlink" title="Main Camera Size / 调整相机尺寸"></a>Main Camera Size / 调整相机尺寸</h3><ul>
+<li>Inspector<ul>
+<li>Camera<ul>
+<li>Size: <code>6</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Main_Camera_Size.png" class="" title="Main Camera Size">
+
+<h3 id="Sorting-Layer-层排序"><a href="#Sorting-Layer-层排序" class="headerlink" title="Sorting Layer / 层排序"></a>Sorting Layer / 层排序</h3><p><code>Order In Layer</code> 也可以排序，数字越大越前</p>
+<ul>
+<li>Hierarchy<ul>
+<li>Back</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Sprite Renderer<ul>
+<li>Additional Settings<ul>
+<li>Sorting Layer<ul>
+<li>Add Sorting Layer…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>新增</p>
+<ol>
+<li>Background</li>
+<li>Foreground</li>
+</ol>
+<img src="/2019/12/11/Sunny-Land/Sorting_Layer.png" class="" title="Sorting Layer">
+
+<ul>
+<li><p>Hierarchy</p>
+<ul>
+<li>Back</li>
+</ul>
+</li>
+<li><p>Inspector</p>
+<ul>
+<li>Check: <code>显示 Back</code></li>
+<li>Sprite Renderer<ul>
+<li>Additional Settings<ul>
+<li>Sorting Layer: <code>Background</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Hierarchy</p>
+<ul>
+<li>Grid<ul>
+<li>Tielmap</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Inspector</p>
+<ul>
+<li>Sprite Renderer<ul>
+<li>Additional Settings<ul>
+<li>Sorting Layer: <code>Fackground</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Change_Layer.png" class="" title="Change Layer">
+
+<h3 id="Player"><a href="#Player" class="headerlink" title="Player"></a>Player</h3><p>创建 Player Sprite, 并将 <code>player-idle-1</code> 拖入</p>
+<ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Sunnyland<ul>
+<li>artwork<ul>
+<li>Sprites<ul>
+<li>player<ul>
+<li>idle: <code>16 Pixels Per Unit</code><ul>
+<li><code>player-idle-1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>-&gt; </p>
+<ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>2D Object<ul>
+<li>Sprite: <code>Player</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Sprite Renderer<ul>
+<li>Sprite: <code>player-idle-1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Physics-物理"><a href="#Physics-物理" class="headerlink" title="Physics / 物理"></a>Physics / 物理</h3><p>Tilemap</p>
+<ul>
+<li>Inspector<ul>
+<li>Tilemap Collider 2D</li>
+</ul>
+</li>
+</ul>
+<p>Player</p>
+<ul>
+<li>Inspector<ul>
+<li>Rigidbody 2D<ul>
+<li>Constraints<ul>
+<li>Freeze Rotation<ul>
+<li>Z: <code>true</code> # 不让 Z 轴移动</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Box Collider 2D<ul>
+<li>Edit Collider</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Player_Box_Collider_2D.png" class="" title="Player Box Collider_2D">
+
+<p><code>PlayerController.cs</code></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PlayerController</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> moveSpeed;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> jumpForce;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">private</span> Rigidbody2D rb;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        rb = GetComponent&lt;Rigidbody2D&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (moveSpeed &lt;= <span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            moveSpeed = <span class="number">400</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (jumpForce &lt;= <span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">            jumpForce = <span class="number">400</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">FixedUpdate</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        Movement();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Movement</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// -1 ~ 1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">float</span> horizontalMove = Input.GetAxis(<span class="string">"Horizontal"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// [-1, 0, 1]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">float</span> faceDirection = Input.GetAxisRaw(<span class="string">"Horizontal"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">float</span> EPSILON = <span class="number">0.1f</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Math.Abs(horizontalMove) &gt; EPSILON)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">            rb.velocity = <span class="keyword">new</span> Vector2(horizontalMove * moveSpeed * Time.deltaTime, rb.velocity.y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> ((Math.Abs(faceDirection) &gt; EPSILON))</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">            transform.localScale = <span class="keyword">new</span> Vector3(faceDirection, <span class="number">1</span>, <span class="number">1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Input.GetButtonDown(<span class="string">"Jump"</span>))</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">            rb.velocity = <span class="keyword">new</span> Vector2(rb.velocity.x, jumpForce * Time.deltaTime);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="Animation-动画"><a href="#Animation-动画" class="headerlink" title="Animation / 动画"></a>Animation / 动画</h3><p><strong>先选中 <code>Player</code><br>先选中 <code>Player</code><br>先选中 <code>Player</code></strong></p>
+<ul>
+<li>Porject<ul>
+<li>Assets<ul>
+<li>Animation<ul>
+<li>Player<ul>
+<li>Animator Controller: <code>Player</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>-&gt; </p>
+<ul>
+<li>Inpsector<ul>
+<li>Animator<ul>
+<li>Controller: <code>Player</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hierarchy<ul>
+<li>Player</li>
+</ul>
+</li>
+<li>Window<ul>
+<li>Animation<ul>
+<li>Animation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Animation<ul>
+<li>Create: <code>Idle</code></li>
+<li>Setting<ul>
+<li>Show Sample Rate: <code>true</code></li>
+</ul>
+</li>
+<li>Samples: <code>10</code></li>
+</ul>
+</li>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Sunnyland<ul>
+<li>artwork<ul>
+<li>Sprites<ul>
+<li>player<ul>
+<li>idle<ul>
+<li>player-idle-[1-4] -&gt;<code>Idle</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Animation.png" class="" title="Add Animation">
+
+<h3 id="Animator-动画师（动画转变）"><a href="#Animator-动画师（动画转变）" class="headerlink" title="Animator / 动画师（动画转变）"></a>Animator / 动画师（动画转变）</h3><ul>
+<li>Window<ul>
+<li>Animation<ul>
+<li>Animator</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Animator<ul>
+<li>Idle<ul>
+<li>Make Transition<ul>
+<li>Run</li>
+<li>Jump</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Run<ul>
+<li>Make Transition<ul>
+<li>Idle</li>
+<li>Jump</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Jump<ul>
+<li>Make Transition<ul>
+<li>Fall</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Fall<ul>
+<li>Make Transition<ul>
+<li>Idle</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parameters + float<ul>
+<li>running: <code>0.0</code></li>
+</ul>
+</li>
+<li>Parameters + bool<ul>
+<li>jumping: <code>false</code></li>
+<li>falling: <code>false</code></li>
+<li>idle: <code>false</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Animator.png" class="" title="Add Animator">
+
+<p>Idle -&gt; Run</p>
+<ul>
+<li>Inspector<ul>
+<li>Has Exit Time: <code>false</code></li>
+<li>Settings<ul>
+<li>Transition Duration: <code>0</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>running &gt; <code>0.1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Run -&gt; Idle</p>
+<ul>
+<li>Inspector<ul>
+<li>Has Exit Time: <code>false</code></li>
+<li>Settings<ul>
+<li>Transition Duration: <code>0</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>running &lt; <code>0.1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Idle -&gt; Jump &amp; Run -&gt; Jump</p>
+<ul>
+<li>Inspector<ul>
+<li>Has Exit Time: <code>false</code></li>
+<li>Settings<ul>
+<li>Transition Duration: <code>0</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>jumping: <code>true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Jump -&gt; Fall</p>
+<ul>
+<li>Inspector<ul>
+<li>Has Exit Time: <code>false</code></li>
+<li>Settings<ul>
+<li>Transition Duration: <code>0</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>falling: <code>true</code></li>
+<li>jumping: <code>false</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Fall -&gt; Idle</p>
+<ul>
+<li>Inspector<ul>
+<li>Has Exit Time: <code>false</code></li>
+<li>Settings<ul>
+<li>Transition Duration: <code>0</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>falling: <code>false</code></li>
+<li>idle: <code>true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Bug-Fix"><a href="#Bug-Fix" class="headerlink" title="Bug Fix:"></a>Bug Fix:</h3><ul>
+<li>Bug 现象<ul>
+<li><code>Player</code> 会卡住</li>
+</ul>
+</li>
+<li>原因<ul>
+<li><code>Box Collider 2D</code> 与 <code>Tilemap</code> 多点碰撞检测</li>
+</ul>
+</li>
+<li>解决方案<ul>
+<li>添加 <code>Circle Collider 2D</code>，单点碰撞检测</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Circle_Collider_2D.png" class="" title="Add Circle Collider 2D">
+
+<h3 id="Cinemachine-电影镜头"><a href="#Cinemachine-电影镜头" class="headerlink" title="Cinemachine / 电影镜头"></a>Cinemachine / 电影镜头</h3><h4 id="Install-Package-安装包"><a href="#Install-Package-安装包" class="headerlink" title="Install Package / 安装包"></a>Install Package / 安装包</h4><ul>
+<li>Menu<ul>
+<li>Window<ul>
+<li>Package Manager</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Packages<ul>
+<li>Cinemachine: <code>Install</code></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Cinemachine.png" class="" title="Cinemachine">
+
+<h4 id="Create-2D-Camera-创建-2D-Camera"><a href="#Create-2D-Camera-创建-2D-Camera" class="headerlink" title="Create 2D Camera / 创建 2D Camera"></a>Create 2D Camera / 创建 2D Camera</h4><ul>
+<li>Menu<ul>
+<li>Cinemachine<ul>
+<li>Create 2D Camera</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/2D_Camera.png" class="" title="Add 2D Camera">
+
+<h4 id="CM-vcam1"><a href="#CM-vcam1" class="headerlink" title="CM vcam1"></a>CM vcam1</h4><ul>
+<li>Inspector<ul>
+<li>Cinemachine Virtual Camera(Script)<ul>
+<li>Follow: <code>Player</code></li>
+<li>Lens<ul>
+<li>Orthographic Size: <code>7.43</code> </li>
+</ul>
+</li>
+<li>Body<ul>
+<li>Dead Zone Width: <code>0.2</code></li>
+<li>Dead Zone Height: <code>0.24</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/CM_vcam.png" class="" title="Add CM vcam">
+
+<h5 id="调整背景"><a href="#调整背景" class="headerlink" title="调整背景"></a>调整背景</h5><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>Create Empty: <code>Background</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Polygon Collider 2D<ul>
+<li>IsTrigger: <code>True</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Circle_Collider_2D.png" class="" title="Add Circle Collider 2D">
+
+<h5 id="CinemaConfiner-界限，边界"><a href="#CinemaConfiner-界限，边界" class="headerlink" title="CinemaConfiner / 界限，边界"></a>CinemaConfiner / 界限，边界</h5><ul>
+<li>Inspector<ul>
+<li>Cinemachine Virtual Camera(Script)<ul>
+<li>Add Extension<ul>
+<li>CinemaConfiner</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cinemachine Confiner(Script)<ul>
+<li>Bounding Shape 2D: <code>Background(Polygon Collider 2D)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Bounding_Shape_2D.png" class="" title="Add Bounding Shape 2D">
+
+<h3 id="Collections-收集"><a href="#Collections-收集" class="headerlink" title="Collections / 收集"></a>Collections / 收集</h3><p>cherry &amp; gem: <code>16 px</code></p>
+<ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>2D Object<ul>
+<li>Sprite: <code>Cherry</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tag: <code>Collection</code></li>
+<li>Sprite Renderer<ul>
+<li>Sprite: <code>cherry-1</code></li>
+<li>Sorting Layer: <code>Foreground</code></li>
+</ul>
+</li>
+<li>Box Collider<ul>
+<li>IsTrigger: <code>true</code></li>
+</ul>
+</li>
+<li>Animator<ul>
+<li>Controller: <code>Cherry</code><br>&lt;-</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Animation<ul>
+<li>Collections<ul>
+<li>Animator Controller: <code>Cherry</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Cherry_Animation.png" class="" title="Cherry Animation">
+
+<h3 id="Bug-Fix-1"><a href="#Bug-Fix-1" class="headerlink" title="Bug Fix:"></a>Bug Fix:</h3><ul>
+<li>Bug 现象<ul>
+<li><code>Player</code> 方向键，粘墙(Tilemap)</li>
+</ul>
+</li>
+<li>原因<ul>
+<li><code>Player</code> 与 <code>Tilemap</code> 之间有磨擦力，不会自动滑落</li>
+</ul>
+</li>
+<li>解决方案<ul>
+<li><code>Assets</code> 添加 <code>Physics Material 2D</code>，磨擦力(Friction) 置为 <code>0</code>，添加到 <code>Player &gt; Box Collider 2D</code></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Physics_Material_2D.png" class="" title="Physics Material 2D">
+
+<h3 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h3><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>UI<ul>
+<li>Canvas</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Canvas<ul>
+<li>Create<ul>
+<li>UI<ul>
+<li>Text: <code>Cherry</code></li>
+<li>Text: <code>Numbers</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Text_Archors.png" class="" title="Text Archors">
+
+<h3 id="Enemies-敌人"><a href="#Enemies-敌人" class="headerlink" title="Enemies / 敌人"></a>Enemies / 敌人</h3><h4 id="Frog"><a href="#Frog" class="headerlink" title="Frog"></a>Frog</h4><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>Create Empty: <code>Enemies</code></li>
+</ul>
+</li>
+<li>Enemies<ul>
+<li>Create<ul>
+<li>2D Object<ul>
+<li>Sprite: <code>Frog</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Frog<ul>
+<li>Left: <code>Empty Object</code></li>
+<li>Right: <code>Empty Object</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tag: <code>Enemy</code></li>
+<li>Sprite Renderer<ul>
+<li>Sprite: <code>frog-idle-1</code></li>
+</ul>
+</li>
+<li>Rigidbody 2D<ul>
+<li>Constraints<ul>
+<li>Freeze Rotation<ul>
+<li>Z: <code>true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Box Collider 2D<ul>
+<li>Edit Collider</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>创建 <em>Animator Controller</em>: <strong>Frog</strong>， 拖动到 <code>Frog</code></p>
+<p>创建三种状态</p>
+<ol>
+<li>FrogIdle</li>
+<li>FrogJump</li>
+<li>FrogFall</li>
+</ol>
+<ul>
+<li>Prefabs<ul>
+<li>Player</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Hurt.png" class="" title="Hurt">
+
+<h4 id="Eagle"><a href="#Eagle" class="headerlink" title="Eagle"></a>Eagle</h4><p>从 <code>Assets</code> 中拖动 <code>eagle-attack-1</code> 到 <code>Hierarchy</code>，重命名为 <code>Eagle</code></p>
+<ul>
+<li>Hierarchy<ul>
+<li>Eagle<ul>
+<li>Top: <code>Empty Object</code></li>
+<li>Bottom: <code>Empty Object</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tag: <code>Enemy</code></li>
+<li>Sprite Renderer<ul>
+<li>Sprite: <code>eagle-attack-1</code></li>
+</ul>
+</li>
+<li>Rigidbody 2D<ul>
+<li>Gravity Scale: <code>0</code> # 重力</li>
+<li>Constraints<ul>
+<li>Freeze Position<ul>
+<li>X: <code>true</code></li>
+</ul>
+</li>
+<li>Freeze Rotation<ul>
+<li>Z: <code>true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Box Collider 2D<ul>
+<li>Edit Collider</li>
+<li>Offset<ul>
+<li>X: <code>-0.4</code></li>
+<li>Y: <code>-0.4</code></li>
+</ul>
+</li>
+<li>Radius: <code>0.5</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>创建 <em>Animator Controller</em>: <strong>Eagle</strong>， 拖动到 <code>Eagle</code></p>
+<p>创建三种状态</p>
+<ol>
+<li>EagleIdle</li>
+<li>FrogJump</li>
+<li>FrogFall</li>
+</ol>
+<ul>
+<li>Prefabs<ul>
+<li>Player</li>
+</ul>
+</li>
+</ul>
+<h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
+<li>File<ul>
+<li>Build Settings (Shift + Cmd + B)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://game.iosdevlog.com/2019/12/04/Bomber-Man/Build_Settings.png" alt="Build Settings"></p>
+<ul>
+<li>Player Settings</li>
+</ul>
+
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>UI 与 Game 用的是两套不同的坐标。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://space.bilibili.com/370283072/channel/detail?cid=85776" target="_blank" rel="noopener">Unity教程 入门第一款游戏制作</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>Sunny Land / Unity 资源</a></p>
+  <p><span>文章作者:</span>iOSDevLog</a></p>
+  <p><span>发布时间:</span>2019年12月11日 - 19:04:52</p>
+  <p><span>最后更新:</span>2019年12月13日 - 20:52:45</p>
+  <p><span>原始链接:</span><a href="/2019/12/11/Sunny-Land/" title="Sunny Land / Unity 资源">https://game.iosdevlog.com/2019/12/11/Sunny-Land/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://game.iosdevlog.com/2019/12/11/Sunny-Land/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+      
+    </div>
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/AIDevLog.png" alt="iOSDevLog wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="iOSDevLog 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="iOSDevLog 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Code/" rel="tag"># Code</a>
+          
+            <a href="/tags/Design/" rel="tag"># Design</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/11/English/" rel="next" title="游戏开发中常用的英语">
+                <i class="fa fa-chevron-left"></i> 游戏开发中常用的英语
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://2019.iosdevlog.com/uploads/iOSDevLog.png"
+                alt="iOSDevLog" />
+            
+              <p class="site-author-name" itemprop="name">iOSDevLog</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/GameDevLog" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:iosdevlog@iosdevlog.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="skype:jiaxianhua@live.cn?chat" target="_blank" title="Skype">
+                      
+                        <i class="fa fa-fw fa-skype"></i>Skype</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.iosdevlog.com/" title="iOSDevLog" target="_blank">iOSDevLog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://2019.iosdevlog.com/" title="AIDevLog" target="_blank">AIDevLog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏展示"><span class="nav-number">1.</span> <span class="nav-text">游戏展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏开发"><span class="nav-number">2.</span> <span class="nav-text">游戏开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-2D-游戏"><span class="nav-number">2.1.</span> <span class="nav-text">创建 2D 游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Import-Assets-导入资源"><span class="nav-number">2.2.</span> <span class="nav-text">Import Assets / 导入资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background-背景"><span class="nav-number">2.3.</span> <span class="nav-text">Background / 背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tilemap-瓦片地图"><span class="nav-number">2.4.</span> <span class="nav-text">Tilemap / 瓦片地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Camera-Size-调整相机尺寸"><span class="nav-number">2.5.</span> <span class="nav-text">Main Camera Size / 调整相机尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sorting-Layer-层排序"><span class="nav-number">2.6.</span> <span class="nav-text">Sorting Layer / 层排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Player"><span class="nav-number">2.7.</span> <span class="nav-text">Player</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Physics-物理"><span class="nav-number">2.8.</span> <span class="nav-text">Physics / 物理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animation-动画"><span class="nav-number">2.9.</span> <span class="nav-text">Animation / 动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animator-动画师（动画转变）"><span class="nav-number">2.10.</span> <span class="nav-text">Animator / 动画师（动画转变）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug-Fix"><span class="nav-number">2.11.</span> <span class="nav-text">Bug Fix:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cinemachine-电影镜头"><span class="nav-number">2.12.</span> <span class="nav-text">Cinemachine / 电影镜头</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-Package-安装包"><span class="nav-number">2.12.1.</span> <span class="nav-text">Install Package / 安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Create-2D-Camera-创建-2D-Camera"><span class="nav-number">2.12.2.</span> <span class="nav-text">Create 2D Camera / 创建 2D Camera</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CM-vcam1"><span class="nav-number">2.12.3.</span> <span class="nav-text">CM vcam1</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#调整背景"><span class="nav-number">2.12.3.1.</span> <span class="nav-text">调整背景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CinemaConfiner-界限，边界"><span class="nav-number">2.12.3.2.</span> <span class="nav-text">CinemaConfiner / 界限，边界</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collections-收集"><span class="nav-number">2.13.</span> <span class="nav-text">Collections / 收集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug-Fix-1"><span class="nav-number">2.14.</span> <span class="nav-text">Bug Fix:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI"><span class="nav-number">2.15.</span> <span class="nav-text">UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enemies-敌人"><span class="nav-number">2.16.</span> <span class="nav-text">Enemies / 敌人</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Frog"><span class="nav-number">2.16.1.</span> <span class="nav-text">Frog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Eagle"><span class="nav-number">2.16.2.</span> <span class="nav-text">Eagle</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导出游戏"><span class="nav-number">3.</span> <span class="nav-text">导出游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">5.</span> <span class="nav-text">下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏"><span class="nav-number">5.1.</span> <span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number">5.2.</span> <span class="nav-text">源码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">iOSDevLog</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">6.3k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
