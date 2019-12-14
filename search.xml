@@ -774,12 +774,7 @@
 </li>
 </ul>
 <p>创建 <em>Animator Controller</em>: <strong>Eagle</strong>， 拖动到 <code>Eagle</code></p>
-<p>创建三种状态</p>
-<ol>
-<li>EagleIdle</li>
-<li>FrogJump</li>
-<li>FrogFall</li>
-</ol>
+<p>创建一种状态 <code>Eagle</code></p>
 <ul>
 <li>Prefabs<ul>
 <li>Player</li>
