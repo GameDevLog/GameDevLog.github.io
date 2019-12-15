@@ -119,8 +119,15 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Physics_Material_2D.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Text_Archors.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Hurt.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Hit.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Dialog.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;House.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Dialog_Animation.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Porject_Settings.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;Crouch_Settings.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;Sunny-Land&#x2F;DeadLine.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;Bomber-Man&#x2F;Build_Settings.png">
-<meta property="og:updated_time" content="2019-12-14T02:26:29.030Z">
+<meta property="og:updated_time" content="2019-12-15T04:20:22.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;GameDevLog&#x2F;GameDevLogTemplete&#x2F;master&#x2F;ScreenShots&#x2F;6.SunnyLand.gif">
 
@@ -374,8 +381,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-12-14T10:26:29+08:00">
-                2019-12-14
+              <time title="更新于" itemprop="dateModified" datetime="2019-12-15T12:20:22+08:00">
+                2019-12-15
               </time>
             
           </span>
@@ -424,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1k
+                  1.3k
                 </span>
               
 
@@ -440,7 +447,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  7
                 </span>
               
             </div>
@@ -1239,6 +1246,212 @@
 </ul>
 </li>
 </ul>
+<h3 id="Audio-音效"><a href="#Audio-音效" class="headerlink" title="Audio / 音效"></a>Audio / 音效</h3><ul>
+<li>Audio Listener: 耳朵</li>
+<li>Audio Source: 扬声器</li>
+<li>Audio Clips: 音乐/声音</li>
+</ul>
+<h4 id="Assets"><a href="#Assets" class="headerlink" title="Assets"></a>Assets</h4><ul>
+<li>Sound FX - Retro Pack</li>
+<li>Casual Game BGM</li>
+</ul>
+<p>Player BGM / 背景音</p>
+<ul>
+<li>Inspector<ul>
+<li>Prefab<ul>
+<li>Overrides<ul>
+<li>Apply All # 每个 <code>Player Prefab</code> 都包含声音</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Audio Source<ul>
+<li>Loop: <code>true</code></li>
+<li>AudioClip: <code>BGM_01</code><br>&lt;-</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project<ul>
+<li>CasualGame<ul>
+<li>BGM_01</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Enemy 消灭声音</p>
+<ul>
+<li>Hierarchy<ul>
+<li>Enemy<ul>
+<li>Frog &gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Audio Source Effects<ul>
+<li>Play On Awake: <code>false</code></li>
+<li>AudioClip: <code>hit_04</code><br>&lt;-</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project<ul>
+<li>Zero Rare<ul>
+<li>Retro Source<ul>
+<li>Hit<ul>
+<li>hit_04</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Hit.png" class="" title="Hit">
+
+<p>其它声音</p>
+<ul>
+<li>跳</li>
+<li>收集</li>
+<li>。。。</li>
+</ul>
+<h3 id="Dialog-对话框"><a href="#Dialog-对话框" class="headerlink" title="Dialog / 对话框"></a>Dialog / 对话框</h3><h4 id="Assets-字体"><a href="#Assets-字体" class="headerlink" title="Assets / 字体"></a>Assets / 字体</h4><p>Font: Free Pixel Font - Thaleah</p>
+<ul>
+<li>Hierarchy<ul>
+<li>Canves<ul>
+<li>Panel: <code>Dialog</code><ul>
+<li>Text</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Dialog.png" class="" title="Dialog">
+
+<h4 id="House"><a href="#House" class="headerlink" title="House"></a>House</h4><ul>
+<li>Inspector<ul>
+<li>Box Collider 2D<ul>
+<li>Edit Collider</li>
+<li>Is Trigger: <code>true</code></li>
+</ul>
+</li>
+<li>Enter Dialog(Script)<ul>
+<li>Enter Dialog: <code>Dialog</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/House.png" class="" title="House">
+
+<h4 id="Dialog-Animation"><a href="#Dialog-Animation" class="headerlink" title="Dialog Animation"></a>Dialog Animation</h4><ul>
+<li>Project<ul>
+<li>Animation<ul>
+<li>Dialog<ul>
+<li>Animation: <code>Dialog</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>拖动到 UI <code>Dialog</code> 上，自动生成 <code>EnterDialog</code> Animator</p>
+<img src="/2019/12/11/Sunny-Land/Dialog_Animation.png" class="" title="Dialog Animation">
+
+<h3 id="Crouch-下蹲"><a href="#Crouch-下蹲" class="headerlink" title="Crouch / 下蹲"></a>Crouch / 下蹲</h3><ul>
+<li>Edit<ul>
+<li>Project Settings…<ul>
+<li>Input<ul>
+<li>Jump<ul>
+<li>Duplicate Array Element: <code>Crouch</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Porject_Settings.png" class="" title="Porject_Settings">
+
+<ul>
+<li>Crouch<ul>
+<li>Positive Button: <code>s</code></li>
+<li>Alt Positive Button: <code>down</code></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Crouch_Settings.png" class="" title="Crouch Settings">
+
+<ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Animation<ul>
+<li>Player<ul>
+<li>Animation: <code>Crouch</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="DeadLine-死亡"><a href="#DeadLine-死亡" class="headerlink" title="DeadLine / 死亡"></a>DeadLine / 死亡</h3><ul>
+<li>Hierarchy<ul>
+<li>Empty Object: <code>DeadLine</code></li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tag: <code>DeadLine</code></li>
+<li>Transform<ul>
+<li>Position<ul>
+<li>Y: <code>-8.3</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Box Collider 2D<ul>
+<li>Is Trigger: <code>True</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/DeadLine.png" class="" title="DeadLine">
+
+<h3 id="光效"><a href="#光效" class="headerlink" title="光效"></a>光效</h3><ul>
+<li>素材的 Diffuse 材质 </li>
+<li>法线贴图 Normal map</li>
+<li>点光源，方向光源</li>
+</ul>
+<h4 id="安装-Package"><a href="#安装-Package" class="headerlink" title="安装 Package"></a>安装 Package</h4><p>Lightweight RP</p>
+<ul>
+<li>Level_2<ul>
+<li>Grid<ul>
+<li>Ground</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tilemap Renderer<ul>
+<li>Material: <code>Default-Diffuse</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>变暗</p>
 <h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
 <li>File<ul>
 <li>Build Settings (Shift + Cmd + B)</li>
@@ -1252,9 +1465,13 @@
 
 
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>UI 与 Game 用的是两套不同的坐标。</p>
+<p>参考:</p>
+<ol>
+<li><a href="https://space.bilibili.com/370283072/channel/detail?cid=85776" target="_blank" rel="noopener">Unity教程 入门第一款游戏制作</a></li>
+<li><a href="https://www.youtube.com/watch?v=dwcT-Dch0bA" target="_blank" rel="noopener">2D Movement in Unity (Tutorial)</a></li>
+</ol>
 <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://space.bilibili.com/370283072/channel/detail?cid=85776" target="_blank" rel="noopener">Unity教程 入门第一款游戏制作</a></p>
 
       
     </div>
@@ -1276,7 +1493,7 @@
   <p><span>本文标题:</span>Sunny Land / Unity 资源</a></p>
   <p><span>文章作者:</span>iOSDevLog</a></p>
   <p><span>发布时间:</span>2019年12月11日 - 19:04:52</p>
-  <p><span>最后更新:</span>2019年12月14日 - 10:26:29</p>
+  <p><span>最后更新:</span>2019年12月15日 - 12:20:22</p>
   <p><span>原始链接:</span><a href="/2019/12/11/Sunny-Land/" title="Sunny Land / Unity 资源">https://game.iosdevlog.com/2019/12/11/Sunny-Land/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://game.iosdevlog.com/2019/12/11/Sunny-Land/"  aria-label="复制成功！"></i></span>
   </p>
@@ -1373,6 +1590,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/12/14/Free-Platform-Game-Assets/" rel="prev" title="Free Platform Game Assets">
+                Free Platform Game Assets <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -1452,7 +1673,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1474,7 +1695,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -1547,7 +1768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏展示"><span class="nav-number">1.</span> <span class="nav-text">游戏展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏开发"><span class="nav-number">2.</span> <span class="nav-text">游戏开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-2D-游戏"><span class="nav-number">2.1.</span> <span class="nav-text">创建 2D 游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Import-Assets-导入资源"><span class="nav-number">2.2.</span> <span class="nav-text">Import Assets / 导入资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background-背景"><span class="nav-number">2.3.</span> <span class="nav-text">Background / 背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tilemap-瓦片地图"><span class="nav-number">2.4.</span> <span class="nav-text">Tilemap / 瓦片地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Camera-Size-调整相机尺寸"><span class="nav-number">2.5.</span> <span class="nav-text">Main Camera Size / 调整相机尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sorting-Layer-层排序"><span class="nav-number">2.6.</span> <span class="nav-text">Sorting Layer / 层排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Player"><span class="nav-number">2.7.</span> <span class="nav-text">Player</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Physics-物理"><span class="nav-number">2.8.</span> <span class="nav-text">Physics / 物理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animation-动画"><span class="nav-number">2.9.</span> <span class="nav-text">Animation / 动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animator-动画师（动画转变）"><span class="nav-number">2.10.</span> <span class="nav-text">Animator / 动画师（动画转变）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug-Fix"><span class="nav-number">2.11.</span> <span class="nav-text">Bug Fix:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cinemachine-电影镜头"><span class="nav-number">2.12.</span> <span class="nav-text">Cinemachine / 电影镜头</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-Package-安装包"><span class="nav-number">2.12.1.</span> <span class="nav-text">Install Package / 安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Create-2D-Camera-创建-2D-Camera"><span class="nav-number">2.12.2.</span> <span class="nav-text">Create 2D Camera / 创建 2D Camera</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CM-vcam1"><span class="nav-number">2.12.3.</span> <span class="nav-text">CM vcam1</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#调整背景"><span class="nav-number">2.12.3.1.</span> <span class="nav-text">调整背景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CinemaConfiner-界限，边界"><span class="nav-number">2.12.3.2.</span> <span class="nav-text">CinemaConfiner / 界限，边界</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collections-收集"><span class="nav-number">2.13.</span> <span class="nav-text">Collections / 收集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug-Fix-1"><span class="nav-number">2.14.</span> <span class="nav-text">Bug Fix:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI"><span class="nav-number">2.15.</span> <span class="nav-text">UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enemies-敌人"><span class="nav-number">2.16.</span> <span class="nav-text">Enemies / 敌人</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Frog"><span class="nav-number">2.16.1.</span> <span class="nav-text">Frog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Eagle"><span class="nav-number">2.16.2.</span> <span class="nav-text">Eagle</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导出游戏"><span class="nav-number">3.</span> <span class="nav-text">导出游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">5.</span> <span class="nav-text">下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏"><span class="nav-number">5.1.</span> <span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number">5.2.</span> <span class="nav-text">源码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏展示"><span class="nav-number">1.</span> <span class="nav-text">游戏展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏开发"><span class="nav-number">2.</span> <span class="nav-text">游戏开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-2D-游戏"><span class="nav-number">2.1.</span> <span class="nav-text">创建 2D 游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Import-Assets-导入资源"><span class="nav-number">2.2.</span> <span class="nav-text">Import Assets / 导入资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Background-背景"><span class="nav-number">2.3.</span> <span class="nav-text">Background / 背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tilemap-瓦片地图"><span class="nav-number">2.4.</span> <span class="nav-text">Tilemap / 瓦片地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Camera-Size-调整相机尺寸"><span class="nav-number">2.5.</span> <span class="nav-text">Main Camera Size / 调整相机尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sorting-Layer-层排序"><span class="nav-number">2.6.</span> <span class="nav-text">Sorting Layer / 层排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Player"><span class="nav-number">2.7.</span> <span class="nav-text">Player</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Physics-物理"><span class="nav-number">2.8.</span> <span class="nav-text">Physics / 物理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animation-动画"><span class="nav-number">2.9.</span> <span class="nav-text">Animation / 动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animator-动画师（动画转变）"><span class="nav-number">2.10.</span> <span class="nav-text">Animator / 动画师（动画转变）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug-Fix"><span class="nav-number">2.11.</span> <span class="nav-text">Bug Fix:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cinemachine-电影镜头"><span class="nav-number">2.12.</span> <span class="nav-text">Cinemachine / 电影镜头</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-Package-安装包"><span class="nav-number">2.12.1.</span> <span class="nav-text">Install Package / 安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Create-2D-Camera-创建-2D-Camera"><span class="nav-number">2.12.2.</span> <span class="nav-text">Create 2D Camera / 创建 2D Camera</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CM-vcam1"><span class="nav-number">2.12.3.</span> <span class="nav-text">CM vcam1</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#调整背景"><span class="nav-number">2.12.3.1.</span> <span class="nav-text">调整背景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CinemaConfiner-界限，边界"><span class="nav-number">2.12.3.2.</span> <span class="nav-text">CinemaConfiner / 界限，边界</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collections-收集"><span class="nav-number">2.13.</span> <span class="nav-text">Collections / 收集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug-Fix-1"><span class="nav-number">2.14.</span> <span class="nav-text">Bug Fix:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI"><span class="nav-number">2.15.</span> <span class="nav-text">UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enemies-敌人"><span class="nav-number">2.16.</span> <span class="nav-text">Enemies / 敌人</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Frog"><span class="nav-number">2.16.1.</span> <span class="nav-text">Frog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Eagle"><span class="nav-number">2.16.2.</span> <span class="nav-text">Eagle</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Audio-音效"><span class="nav-number">2.17.</span> <span class="nav-text">Audio / 音效</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Assets"><span class="nav-number">2.17.1.</span> <span class="nav-text">Assets</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dialog-对话框"><span class="nav-number">2.18.</span> <span class="nav-text">Dialog / 对话框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Assets-字体"><span class="nav-number">2.18.1.</span> <span class="nav-text">Assets / 字体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#House"><span class="nav-number">2.18.2.</span> <span class="nav-text">House</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dialog-Animation"><span class="nav-number">2.18.3.</span> <span class="nav-text">Dialog Animation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Crouch-下蹲"><span class="nav-number">2.19.</span> <span class="nav-text">Crouch / 下蹲</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DeadLine-死亡"><span class="nav-number">2.20.</span> <span class="nav-text">DeadLine / 死亡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#光效"><span class="nav-number">2.21.</span> <span class="nav-text">光效</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Package"><span class="nav-number">2.21.1.</span> <span class="nav-text">安装 Package</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导出游戏"><span class="nav-number">3.</span> <span class="nav-text">导出游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">5.</span> <span class="nav-text">下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏"><span class="nav-number">5.1.</span> <span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number">5.2.</span> <span class="nav-text">源码</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1588,7 +1809,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.3k</span>
+    <span title="Site words total count">7.5k</span>
   
 </div>
 

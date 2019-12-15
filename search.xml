@@ -1,6 +1,271 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Tetris / 俄罗斯方块</title>
+    <url>/2019/12/14/Tetris/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/7.Tetris.gif" alt="Tetris"></p>
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="Shape-形状"><a href="#Shape-形状" class="headerlink" title="Shape / 形状"></a>Shape / 形状</h3><ul>
+<li>Assets &gt; Create &gt; Sprites &gt; Square</li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li>Hierarchy</li>
+</ul>
+<p><code>Ctrl+D</code>, <code>W</code>, <code>Crrl</code> + 方向键</p>
+<ul>
+<li>Inspector<ul>
+<li>Transform<ul>
+<li>Scale<ul>
+<li>X: <code>0.9</code></li>
+<li>Y: <code>0.9</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sprite Renderer<ul>
+<li>Color: <code>Pink</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>制作 7 种方块</p>
+<img src="/2019/12/14/Tetris/Prefabs.png" class="" title="Prefabs">
+
+<h3 id="Move-Left-Right-左右移动"><a href="#Move-Left-Right-左右移动" class="headerlink" title="Move Left Right / 左右移动"></a>Move Left Right / 左右移动</h3><p>添加坐标原点</p>
+<img src="/2019/12/14/Tetris/0_0.png" class="" title="(0,0)">
+
+<img src="/2019/12/14/Tetris/Origin.png" class="" title="Origin">
+
+
+<p><code>ValidMove()</code> 每一个小方块如果超出边界，为非法操作，需要退回上一状态。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ValidMove</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">foreach</span> (Transform child <span class="keyword">in</span> transform)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">int</span> roundedX = Mathf.RoundToInt(child.transform.position.x);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">int</span> roundedY = Mathf.RoundToInt(child.transform.position.y);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (roundedX &lt; <span class="number">0</span> || roundedX &gt;= width || roundedY &lt; <span class="number">0</span> || roundedY &gt;= height)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>左右移动，如果移动非法，还原。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (Input.GetKeyDown(KeyCode.LeftArrow))</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.position += <span class="keyword">new</span> Vector3(<span class="number">-1</span>, <span class="number">0</span>, <span class="number">0</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (!ValidMove())</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            transform.position -= <span class="keyword">new</span> Vector3(<span class="number">-1</span>, <span class="number">0</span>, <span class="number">0</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (Input.GetKeyDown(KeyCode.RightArrow))</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.position += <span class="keyword">new</span> Vector3(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (!ValidMove())</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            transform.position -= <span class="keyword">new</span> Vector3(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (Time.time - previousTime &gt; (Input.GetKey(KeyCode.DownArrow) ? fallTime / <span class="number">10</span> : fallTime))</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.position += <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        previousTime = Time.time;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="Rotate-旋转"><a href="#Rotate-旋转" class="headerlink" title="Rotate / 旋转"></a>Rotate / 旋转</h3><p>找到旋转的中心，我这里没有按照图片上的操作，除了 <code>田</code> 字方块为 <code>(0.5, 0.5, 0)</code> 为旋转中心外，其它均为 <code>0</code> 号方块的中心 <code>(0, 0, 0)</code></p>
+<img src="/2019/12/14/Tetris/Rotate.png" class="" title="Rotate">
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="comment">// ...</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (Input.GetKeyDown(KeyCode.UpArrow))</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="comment">// local position -&gt; global position</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">        transform.RotateAround(transform.TransformPoint(rotationPoint), <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>), <span class="number">90f</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (!ValidMove())</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            transform.RotateAround(transform.TransformPoint(rotationPoint), <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>), <span class="number">-90f</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/14/Tetris/Up_Rotate.png" class="" title="Up Rotate">
+
+<h3 id="Collider-碰撞检测"><a href="#Collider-碰撞检测" class="headerlink" title="Collider / 碰撞检测"></a>Collider / 碰撞检测</h3><p>生成器生成方块</p>
+
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Spawn</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> GameObject[] tetrominoes;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        NewTetromino();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">NewTetromino</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        Instantiate(tetrominoes[Random.Range(<span class="number">0</span>, tetrominoes.Length)], transform.position, Quaternion.identity);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/14/Tetris/NewTetromino.png" class="" title="NewTetromino">
+
+<p>使用二维数组存放小方块的值</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">AddToGrid</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">foreach</span> (Transform child <span class="keyword">in</span> transform)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">int</span> roundedX = Mathf.RoundToInt(child.transform.position.x);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">int</span> roundedY = Mathf.RoundToInt(child.transform.position.y);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        grid[roundedX, roundedY] = child;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/14/Tetris/Grid.png" class="" title="Grid">
+
+<p>当前小方块为 <code>null</code>，才可以移动</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ValidMove</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">foreach</span> (Transform child <span class="keyword">in</span> transform)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="comment">// ...</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">        </span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (grid[roundedX, roundedY] != <span class="literal">null</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/14/Tetris/Collider.png" class="" title="Collider">
+
+<h3 id="Clean-Line-消行"><a href="#Clean-Line-消行" class="headerlink" title="Clean Line / 消行"></a>Clean Line / 消行</h3><img src="/2019/12/14/Tetris/CleanLine.png" class="" title="CleanLine">
+
+<p>算法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 检测每一行，如果成行</span></pre></td></tr><tr><td class="code"><pre><span class="line">    1. 删除当前行</span></pre></td></tr><tr><td class="code"><pre><span class="line">    1. 上面的行下移</span></pre></td></tr></table></figure>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">CheckForLines</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> row = height - <span class="number">1</span>; row &gt;= <span class="number">0</span>; row--)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (HasLine(row))</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            DeleteLine(row);</span></pre></td></tr><tr><td class="code"><pre><span class="line">            RowDown(row);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h4 id="如果成行"><a href="#如果成行" class="headerlink" title="如果成行"></a>如果成行</h4><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">bool</span> <span class="title">HasLine</span>(<span class="params"><span class="keyword">int</span> row</span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; width; col++)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (grid[col, row] == <span class="literal">null</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h5 id="删除当前行"><a href="#删除当前行" class="headerlink" title="删除当前行"></a>删除当前行</h5><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DeleteLine</span>(<span class="params"><span class="keyword">int</span> row</span>)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; width; col++)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        Destroy(grid[col, row].gameObject);</span></pre></td></tr><tr><td class="code"><pre><span class="line">        grid[col, row] = <span class="literal">null</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h5 id="上面的行下移"><a href="#上面的行下移" class="headerlink" title="上面的行下移"></a>上面的行下移</h5><pre><code class="csharp"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">RowDown</span>(<span class="params"><span class="keyword">int</span> currentRow</span>)</span>
+<span class="function"></span>{
+    <span class="keyword">for</span> (<span class="keyword">int</span> row = currentRow; row &lt; height; row++)
+    {
+        <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; width; col++)
+        {
+            <span class="keyword">if</span> (grid[col, row] != <span class="literal">null</span>)
+            {
+                grid[col, row - <span class="number">1</span>] = grid[col, row];
+                grid[col, row] = <span class="literal">null</span>;
+                grid[col, row - <span class="number">1</span>].transform.position -= <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);
+            }
+        }
+    }
+}</code></pre>
+<img src="/2019/12/14/Tetris/RowDown.png" class="" title="RowDown">
+
+<h3 id="Audio-音效"><a href="#Audio-音效" class="headerlink" title="Audio / 音效"></a>Audio / 音效</h3><p><code>Background</code> 添加 <code>Audio Source</code></p>
+<ul>
+<li>Inspector<ul>
+<li>Audio Source<ul>
+<li>AudioClip: <code>Tetris</code></li>
+<li>Play On Awake: <code>true</code></li>
+<li>Loop: <code>true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/14/Tetris/Audio.png" class="" title="Audio">
+
+<h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
+<li>File<ul>
+<li>Build Settings (Shift + Cmd + B)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://game.iosdevlog.com/2019/12/04/Bomber-Man/Build_Settings.png" alt="Build Settings"></p>
+<ul>
+<li>Project Settings</li>
+</ul>
+<img src="/2019/12/14/Tetris/Project_Settings.png" class="" title="Project Settings">
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>按照教程终于实现了，10 分钟的教程，做了几个小时才完成，主要是对大方块的 <code>(x, y, z)</code> 坐标一开始没有归整，0 号方块应该中心点是 <code>(0, 0, 0)</code> ，在部分大方块都应该按照 0 号方块旋转。</p>
+<p>参考：</p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=T5P8ohdxDjo" target="_blank" rel="noopener">CODING MY OWN TETRIS (Unity)</a></li>
+</ol>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<p>找到游戏列表对应的 <a href="https://game.iosdevlog.com">GameDevLog</a></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Design</tag>
+        <tag>Music</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ARKit</title>
+    <url>/2019/12/14/ARKit/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2>
+
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="安装-ARKit-Package"><a href="#安装-ARKit-Package" class="headerlink" title="安装 ARKit Package"></a>安装 ARKit Package</h3><ul>
+<li>Window<ul>
+<li>Package Manager</li>
+</ul>
+</li>
+</ul>
+<p>搜索 <code>AR</code></p>
+<ul>
+<li><code>AR Foundation</code> 必需</li>
+<li><code>ARKit XR Plugin</code> / iOS 安装</li>
+<li><code>ARCore XR Plugin</code> / Android 选择安装</li>
+</ul>
+<img src="/2019/12/14/ARKit/ARKit_Package.png" class="" title="ARKit Package">
+
+<h3 id="AR-Session"><a href="#AR-Session" class="headerlink" title="AR Session"></a>AR Session</h3><ul>
+<li>Hierarchy<ul>
+<li>Create<ul>
+<li>XR<ul>
+<li>AR Session Origin</li>
+<li>AR Default Point Cloud -&gt; <code>Prefabs</code></li>
+<li>AR Default Plane-&gt; <code>Prefabs</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>AR Session Origin</em></p>
+<ul>
+<li>Inspector<ul>
+<li>AR Plane Manager</li>
+<li>AR Point Cloud Manager</li>
+</ul>
+</li>
+</ul>
+<p><em>AR Default Point Cloud</em></p>
+<h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
+<li>File<ul>
+<li>Build Settings (Shift + Cmd + B)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://game.iosdevlog.com/2019/12/04/Bomber-Man/Build_Settings.png" alt="Build Settings"></p>
+<ul>
+<li>Player Settings</li>
+</ul>
+
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Design</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity Tutorials</title>
+    <url>/2019/12/14/Unity-Tutorials/</url>
+    <content><![CDATA[<h2 id="5-Great-Assets-for-Improving-Graphics-in-Unity-2019"><a href="#5-Great-Assets-for-Improving-Graphics-in-Unity-2019" class="headerlink" title="5 Great Assets for Improving Graphics in Unity 2019!"></a><a href="https://www.youtube.com/watch?v=oKoKnQQuAPw&list=PLX2vGYjWbI0TPcPOKW6GxwuY18eg7CjKZ&index=17" target="_blank" rel="noopener">5 Great Assets for Improving Graphics in Unity 2019!</a></h2><a id="more"></a>
+
+<ol>
+<li><a href="https://ole.unity.com/MeshEffects" target="_blank" rel="noopener">Mesh Effects</a></li>
+<li><a href="https://ole.unity.com/Surforge" target="_blank" rel="noopener">Surforge</a></li>
+<li><a href="https://ole.unity.com/ScreenSpaceShadows" target="_blank" rel="noopener">SE Screen-Space Shadows</a></li>
+<li><a href="https://ole.unity.com/stylizer" target="_blank" rel="noopener">Stylizer</a></li>
+<li><a href="https://ole.unity.com/CTS" target="_blank" rel="noopener">CTS</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Design</tag>
+        <tag>Tutorials</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Free Platform Game Assets</title>
+    <url>/2019/12/14/Free-Platform-Game-Assets/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2>
+
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
+<li>File<ul>
+<li>Build Settings (Shift + Cmd + B)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://game.iosdevlog.com/2019/12/04/Bomber-Man/Build_Settings.png" alt="Build Settings"></p>
+<ul>
+<li>Player Settings</li>
+</ul>
+
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>参考：</p>
+<ol>
+<li><a href="https://assetstore.unity.com/lists/great-free-2d-assets-87803" target="_blank" rel="noopener">Great Free 2D Assets </a></li>
+</ol>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Design</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Sunny Land / Unity 资源</title>
     <url>/2019/12/11/Sunny-Land/</url>
     <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/6.SunnyLand.gif" alt="Sunny Land"></p>
@@ -781,6 +1046,212 @@
 </ul>
 </li>
 </ul>
+<h3 id="Audio-音效"><a href="#Audio-音效" class="headerlink" title="Audio / 音效"></a>Audio / 音效</h3><ul>
+<li>Audio Listener: 耳朵</li>
+<li>Audio Source: 扬声器</li>
+<li>Audio Clips: 音乐/声音</li>
+</ul>
+<h4 id="Assets"><a href="#Assets" class="headerlink" title="Assets"></a>Assets</h4><ul>
+<li>Sound FX - Retro Pack</li>
+<li>Casual Game BGM</li>
+</ul>
+<p>Player BGM / 背景音</p>
+<ul>
+<li>Inspector<ul>
+<li>Prefab<ul>
+<li>Overrides<ul>
+<li>Apply All # 每个 <code>Player Prefab</code> 都包含声音</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Audio Source<ul>
+<li>Loop: <code>true</code></li>
+<li>AudioClip: <code>BGM_01</code><br>&lt;-</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project<ul>
+<li>CasualGame<ul>
+<li>BGM_01</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Enemy 消灭声音</p>
+<ul>
+<li>Hierarchy<ul>
+<li>Enemy<ul>
+<li>Frog &gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Audio Source Effects<ul>
+<li>Play On Awake: <code>false</code></li>
+<li>AudioClip: <code>hit_04</code><br>&lt;-</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project<ul>
+<li>Zero Rare<ul>
+<li>Retro Source<ul>
+<li>Hit<ul>
+<li>hit_04</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Hit.png" class="" title="Hit">
+
+<p>其它声音</p>
+<ul>
+<li>跳</li>
+<li>收集</li>
+<li>。。。</li>
+</ul>
+<h3 id="Dialog-对话框"><a href="#Dialog-对话框" class="headerlink" title="Dialog / 对话框"></a>Dialog / 对话框</h3><h4 id="Assets-字体"><a href="#Assets-字体" class="headerlink" title="Assets / 字体"></a>Assets / 字体</h4><p>Font: Free Pixel Font - Thaleah</p>
+<ul>
+<li>Hierarchy<ul>
+<li>Canves<ul>
+<li>Panel: <code>Dialog</code><ul>
+<li>Text</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Dialog.png" class="" title="Dialog">
+
+<h4 id="House"><a href="#House" class="headerlink" title="House"></a>House</h4><ul>
+<li>Inspector<ul>
+<li>Box Collider 2D<ul>
+<li>Edit Collider</li>
+<li>Is Trigger: <code>true</code></li>
+</ul>
+</li>
+<li>Enter Dialog(Script)<ul>
+<li>Enter Dialog: <code>Dialog</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/House.png" class="" title="House">
+
+<h4 id="Dialog-Animation"><a href="#Dialog-Animation" class="headerlink" title="Dialog Animation"></a>Dialog Animation</h4><ul>
+<li>Project<ul>
+<li>Animation<ul>
+<li>Dialog<ul>
+<li>Animation: <code>Dialog</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>拖动到 UI <code>Dialog</code> 上，自动生成 <code>EnterDialog</code> Animator</p>
+<img src="/2019/12/11/Sunny-Land/Dialog_Animation.png" class="" title="Dialog Animation">
+
+<h3 id="Crouch-下蹲"><a href="#Crouch-下蹲" class="headerlink" title="Crouch / 下蹲"></a>Crouch / 下蹲</h3><ul>
+<li>Edit<ul>
+<li>Project Settings…<ul>
+<li>Input<ul>
+<li>Jump<ul>
+<li>Duplicate Array Element: <code>Crouch</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Porject_Settings.png" class="" title="Porject_Settings">
+
+<ul>
+<li>Crouch<ul>
+<li>Positive Button: <code>s</code></li>
+<li>Alt Positive Button: <code>down</code></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/Crouch_Settings.png" class="" title="Crouch Settings">
+
+<ul>
+<li>Project<ul>
+<li>Assets<ul>
+<li>Animation<ul>
+<li>Player<ul>
+<li>Animation: <code>Crouch</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="DeadLine-死亡"><a href="#DeadLine-死亡" class="headerlink" title="DeadLine / 死亡"></a>DeadLine / 死亡</h3><ul>
+<li>Hierarchy<ul>
+<li>Empty Object: <code>DeadLine</code></li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tag: <code>DeadLine</code></li>
+<li>Transform<ul>
+<li>Position<ul>
+<li>Y: <code>-8.3</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Box Collider 2D<ul>
+<li>Is Trigger: <code>True</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/11/Sunny-Land/DeadLine.png" class="" title="DeadLine">
+
+<h3 id="光效"><a href="#光效" class="headerlink" title="光效"></a>光效</h3><ul>
+<li>素材的 Diffuse 材质 </li>
+<li>法线贴图 Normal map</li>
+<li>点光源，方向光源</li>
+</ul>
+<h4 id="安装-Package"><a href="#安装-Package" class="headerlink" title="安装 Package"></a>安装 Package</h4><p>Lightweight RP</p>
+<ul>
+<li>Level_2<ul>
+<li>Grid<ul>
+<li>Ground</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>Tilemap Renderer<ul>
+<li>Material: <code>Default-Diffuse</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>变暗</p>
 <h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
 <li>File<ul>
 <li>Build Settings (Shift + Cmd + B)</li>
@@ -794,9 +1265,13 @@
 
 
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>UI 与 Game 用的是两套不同的坐标。</p>
+<p>参考:</p>
+<ol>
+<li><a href="https://space.bilibili.com/370283072/channel/detail?cid=85776" target="_blank" rel="noopener">Unity教程 入门第一款游戏制作</a></li>
+<li><a href="https://www.youtube.com/watch?v=dwcT-Dch0bA" target="_blank" rel="noopener">2D Movement in Unity (Tutorial)</a></li>
+</ol>
 <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://space.bilibili.com/370283072/channel/detail?cid=85776" target="_blank" rel="noopener">Unity教程 入门第一款游戏制作</a></p>
 ]]></content>
       <categories>
         <category>Unity</category>
