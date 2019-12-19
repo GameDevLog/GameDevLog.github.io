@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Code,Design," />
+  <meta name="keywords" content="Code,3D,AR," />
 
 
 
@@ -87,18 +87,25 @@
 
 
 <meta name="description" content="游戏展示">
-<meta name="keywords" content="Code,Design">
+<meta name="keywords" content="Code,3D,AR">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARKit">
 <meta property="og:url" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;index.html">
 <meta property="og:site_name" content="GameDevLog">
 <meta property="og:description" content="游戏展示">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;GameDevLog&#x2F;GameDevLogTemplete&#x2F;master&#x2F;ScreenShots&#x2F;8.ARDemo.gif">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;ARKit_Package.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;AR_Camera.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;Quad.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;Scale_ARSession.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;Bomber-Man&#x2F;Build_Settings.png">
-<meta property="og:updated_time" content="2019-12-14T03:34:56.776Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;Player_Settings.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;Player_Settings_ARKit.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;Player_Settings_Android.png">
+<meta property="og:updated_time" content="2019-12-19T07:40:59.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;ARKit&#x2F;ARKit_Package.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;GameDevLog&#x2F;GameDevLogTemplete&#x2F;master&#x2F;ScreenShots&#x2F;8.ARDemo.gif">
 
 
 
@@ -350,8 +357,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-12-14T11:34:56+08:00">
-                2019-12-14
+              <time title="更新于" itemprop="dateModified" datetime="2019-12-19T15:40:59+08:00">
+                2019-12-19
               </time>
             
           </span>
@@ -400,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  103
+                  560
                 </span>
               
 
@@ -416,7 +423,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -437,8 +444,7 @@
       
 
       
-        <h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2>
-
+        <h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/8.ARDemo.gif" alt="ARDemo"></p>
 <a id="more"></a>
 
 <h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><h3 id="安装-ARKit-Package"><a href="#安装-ARKit-Package" class="headerlink" title="安装 ARKit Package"></a>安装 ARKit Package</h3><ul>
@@ -450,36 +456,118 @@
 <p>搜索 <code>AR</code></p>
 <ul>
 <li><code>AR Foundation</code> 必需</li>
-<li><code>ARKit XR Plugin</code> / iOS 安装</li>
-<li><code>ARCore XR Plugin</code> / Android 选择安装</li>
+<li><code>ARKit XR Plugin</code> / iOS</li>
+<li><code>ARCore XR Plugin</code> / Android</li>
 </ul>
 <img src="/2019/12/14/ARKit/ARKit_Package.png" class="" title="ARKit Package">
 
-<h3 id="AR-Session"><a href="#AR-Session" class="headerlink" title="AR Session"></a>AR Session</h3><ul>
-<li>Hierarchy<ul>
+<p>打开 <code>Package</code> 时遇到网络问题</p>
+<p><a href="https://forum.unity.com/threads/network-configuration.590470/" target="_blank" rel="noopener">Network configuration</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'#!/bin/bash</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="string">export HTTP_PROXY=proxy-url</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="string">export HTTPS_PROXY=proxy-url</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="string">nohup "/Applications/Unity Hub.app/Contents/MacOS/Unity Hub" &amp;&gt;/dev/null &amp;'</span> &gt; launchUnityHub.command</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">chmod +x launchUnityHub.command</span></pre></td></tr></table></figure>
+
+<h3 id="AR-Session"><a href="#AR-Session" class="headerlink" title="AR Session"></a>AR Session</h3><p>删除自带的 <code>Main Camera</code></p>
+<ul>
+<li><p>Hierarchy</p>
+<ul>
 <li>Create<ul>
 <li>XR<ul>
+<li>AR Session</li>
 <li>AR Session Origin</li>
-<li>AR Default Point Cloud -&gt; <code>Prefabs</code></li>
-<li>AR Default Plane-&gt; <code>Prefabs</code></li>
+</ul>
+</li>
+<li>Cube</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Inspector</p>
+<ul>
+<li>Position:<ul>
+<li>Y: <code>0.05</code></li>
+</ul>
+</li>
+<li>Scale<ul>
+<li>X: <code>0.1</code></li>
+<li>Y: <code>0.1</code></li>
+<li>Z: <code>0.1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Gizmos</p>
+<ul>
+<li>3D Icons: <code>0</code></li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/14/ARKit/AR_Camera.png" class="" title="AR Camera">
+
+<h4 id="Prefabs"><a href="#Prefabs" class="headerlink" title="Prefabs"></a>Prefabs</h4><ul>
+<li>Hierarchy<ul>
+<li>Empty Object: <code>Game Piece</code></li>
+<li>Game Piece<ul>
+<li>Cube</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+<h3 id="Quad-四方块"><a href="#Quad-四方块" class="headerlink" title="Quad / 四方块"></a>Quad / 四方块</h3><ul>
+<li>Hierarchy<ul>
+<li>Empty Object: <code>Placement Indicator</code></li>
+<li>Placement Indicator<ul>
+<li>Quad</li>
+</ul>
 </li>
 </ul>
-<p><em>AR Session Origin</em></p>
+</li>
+<li>Inspector<ul>
+<li>Rotation:<ul>
+<li>X: <code>90</code></li>
+</ul>
+</li>
+<li>Scale:<ul>
+<li>X: <code>0.1</code></li>
+<li>Y: <code>0.1</code></li>
+<li>Z: <code>0.1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/14/ARKit/Quad.png" class="" title="Scale Quad">
+
+<h3 id="导入-Toy-Plane"><a href="#导入-Toy-Plane" class="headerlink" title="导入 Toy Plane"></a>导入 <code>Toy Plane</code></h3><p>导入 <code>package</code> 后，模型调整一下。</p>
+<p>模型有点大，可以调整 <code>ARSessionOrigin</code>，相关于缩小了模型尺寸</p>
 <ul>
 <li>Inspector<ul>
-<li>AR Plane Manager</li>
-<li>AR Point Cloud Manager</li>
+<li>Scale<ul>
+<li>X: <code>10</code></li>
+<li>Y: <code>10</code></li>
+<li>Z: <code>10</code></li>
 </ul>
 </li>
 </ul>
-<p><em>AR Default Point Cloud</em></p>
+</li>
+</ul>
+<h3 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h3><ol>
+<li>屏幕中心点发出射线</li>
+<li>如果射线与检测的平面相交<ol>
+<li>在平面显示指示器</li>
+<li>如果点击指示器<ol>
+<li>指示器位置生成 <code>Prefabs</code> 模型</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><code>ARTapToPlaceObject.cs</code></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine.XR.ARFoundation;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine.XR.ARSubsystems;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ARTapToPlaceObject</span> : <span class="title">MonoBehaviour</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> GameObject objectToPlace;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> GameObject placementIndictor;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">private</span> ARRaycastManager raycastManager;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">private</span> Pose placementPose;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> placementPoseIsVilid;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        raycastManager = FindObjectOfType&lt;ARRaycastManager&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">        UpdatePlacementPose();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">        UpdatePlacementIndicator();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (placementPoseIsVilid &amp;&amp; Input.touchCount &gt; <span class="number">0</span> &amp;&amp; Input.GetTouch(<span class="number">0</span>).phase == TouchPhase.Began)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">            PlaceObject();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">UpdatePlacementPose</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">var</span> screenCenter = Camera.current.ViewportToScreenPoint(<span class="keyword">new</span> Vector3(<span class="number">0.5f</span>, <span class="number">0.5f</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">var</span> hits = <span class="keyword">new</span> List&lt;ARRaycastHit&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">        raycastManager.Raycast(screenCenter, hits, TrackableType.Planes);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">        placementPoseIsVilid = hits.Count &gt; <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (placementPoseIsVilid)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">            placementPose = hits[<span class="number">0</span>].pose;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">var</span> cameraForword = Camera.current.transform.forward;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">var</span> cameraBearing = <span class="keyword">new</span> Vector3(cameraForword.x, <span class="number">0</span>, cameraForword.z).normalized;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">            placementPose.rotation = Quaternion.LookRotation(cameraBearing);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">UpdatePlacementIndicator</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (placementPoseIsVilid)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">            placementIndictor.SetActive(<span class="literal">true</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line">            placementIndictor.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">55</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">56</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">57</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">58</span></pre></td><td class="code"><pre><span class="line">            placementIndictor.SetActive(<span class="literal">false</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">59</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">60</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">61</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">62</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">PlaceObject</span>(<span class="params"></span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">63</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">64</span></pre></td><td class="code"><pre><span class="line">        Instantiate(objectToPlace, placementPose.position, placementPose.rotation);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">65</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">66</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<img src="/2019/12/14/ARKit/Scale_ARSession.png" class="" title="Scale ARSession">
+
 <h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
-<li>File<ul>
+<li>File <ul>
 <li>Build Settings (Shift + Cmd + B)</li>
 </ul>
 </li>
@@ -488,9 +576,45 @@
 <ul>
 <li>Player Settings</li>
 </ul>
+<img src="/2019/12/14/ARKit/Player_Settings.png" class="" title="Player Settings">
 
+<ul>
+<li>iOS<ul>
+<li>Auto Graphics API: <code>false</code> <strong>! importent</strong></li>
+<li>Requires ARKit Support: <code>true</code></li>
+<li>Camera Usage Description</li>
+<li>Target minimum iOS Version: <code>11</code></li>
+<li>Architecture: <code>ARM64</code></li>
+</ul>
+</li>
+</ul>
+<p>如果不行，可以要以下设置</p>
+<ul>
+<li>Graphics<ul>
+<li>Always Includes Shaders<ul>
+<li>Elements 0: <code>Sprites/Default</code></li>
+<li>Elements 1: <code>UI/Default</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/14/ARKit/Player_Settings_ARKit.png" class="" title="Player Settings ARKit">
 
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<ul>
+<li>Android: <ul>
+<li>Multithreaded Rendering: <code>false</code></li>
+<li>Minimum API Level: `Android 7.0 ‘Nougat’ (API 24)</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/14/ARKit/Player_Settings_Android.png" class="" title="Player Settings Android">
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>参考：</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/58534265/unity-application-doesnt-run-on-ios-due-to-shader-warning-and-compiler-failed-w" target="_blank" rel="noopener">Unity application doesn’t run on iOS due to Shader warning and Compiler failed with XPC_ERROR_CONNECTION_INTERRUPTED</a></li>
+</ul>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
 
       
@@ -513,7 +637,7 @@
   <p><span>本文标题:</span>ARKit</a></p>
   <p><span>文章作者:</span>iOSDevLog</a></p>
   <p><span>发布时间:</span>2019年12月14日 - 11:24:52</p>
-  <p><span>最后更新:</span>2019年12月14日 - 11:34:56</p>
+  <p><span>最后更新:</span>2019年12月19日 - 15:40:59</p>
   <p><span>原始链接:</span><a href="/2019/12/14/ARKit/" title="ARKit">https://game.iosdevlog.com/2019/12/14/ARKit/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://game.iosdevlog.com/2019/12/14/ARKit/"  aria-label="复制成功！"></i></span>
   </p>
@@ -587,7 +711,9 @@
           
             <a href="/tags/Code/" rel="tag"># Code</a>
           
-            <a href="/tags/Design/" rel="tag"># Design</a>
+            <a href="/tags/3D/" rel="tag"># 3D</a>
+          
+            <a href="/tags/AR/" rel="tag"># AR</a>
           
         </div>
       
@@ -693,7 +819,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -704,7 +830,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -715,7 +841,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -788,7 +914,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏展示"><span class="nav-number">1.</span> <span class="nav-text">游戏展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏开发"><span class="nav-number">2.</span> <span class="nav-text">游戏开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-ARKit-Package"><span class="nav-number">2.1.</span> <span class="nav-text">安装 ARKit Package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AR-Session"><span class="nav-number">2.2.</span> <span class="nav-text">AR Session</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导出游戏"><span class="nav-number">3.</span> <span class="nav-text">导出游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">5.</span> <span class="nav-text">下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏"><span class="nav-number">5.1.</span> <span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number">5.2.</span> <span class="nav-text">源码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏展示"><span class="nav-number">1.</span> <span class="nav-text">游戏展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏开发"><span class="nav-number">2.</span> <span class="nav-text">游戏开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-ARKit-Package"><span class="nav-number">2.1.</span> <span class="nav-text">安装 ARKit Package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AR-Session"><span class="nav-number">2.2.</span> <span class="nav-text">AR Session</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Prefabs"><span class="nav-number">2.2.1.</span> <span class="nav-text">Prefabs</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quad-四方块"><span class="nav-number">2.3.</span> <span class="nav-text">Quad / 四方块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入-Toy-Plane"><span class="nav-number">2.4.</span> <span class="nav-text">导入 Toy Plane</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脚本"><span class="nav-number">2.5.</span> <span class="nav-text">脚本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导出游戏"><span class="nav-number">3.</span> <span class="nav-text">导出游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">5.</span> <span class="nav-text">下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏"><span class="nav-number">5.1.</span> <span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number">5.2.</span> <span class="nav-text">源码</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -829,7 +955,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.5k</span>
+    <span title="Site words total count">9k</span>
   
 </div>
 

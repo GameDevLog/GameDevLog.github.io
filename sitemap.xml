@@ -2,16 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://game.iosdevlog.com/2019/12/14/Tetris/</loc>
+    <loc>https://game.iosdevlog.com/2019/12/19/SFML/</loc>
     
-    <lastmod>2019-12-15T04:30:31.752Z</lastmod>
+    <lastmod>2019-12-19T08:57:13.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/04/Bomber-Man/</loc>
+    
+    <lastmod>2019-12-19T07:40:59.187Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/06/Box-Tower/</loc>
+    
+    <lastmod>2019-12-19T07:40:59.187Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://game.iosdevlog.com/2019/12/11/Sunny-Land/</loc>
     
-    <lastmod>2019-12-15T04:20:22.481Z</lastmod>
+    <lastmod>2019-12-19T07:40:59.187Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/14/ARKit/</loc>
+    
+    <lastmod>2019-12-19T07:40:59.187Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/14/Free-Platform-Game-Assets/</loc>
+    
+    <lastmod>2019-12-19T07:40:59.187Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/14/Tetris/</loc>
+    
+    <lastmod>2019-12-19T07:40:59.187Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/05/Guess-The-Number/</loc>
+    
+    <lastmod>2019-12-19T07:40:59.183Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/10/Hexagon/</loc>
+    
+    <lastmod>2019-12-19T06:28:04.188Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/09/Type-Game/</loc>
+    
+    <lastmod>2019-12-19T06:28:00.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/11/English/</loc>
+    
+    <lastmod>2019-12-19T06:27:46.930Z</lastmod>
     
   </url>
   
@@ -23,65 +86,9 @@
   </url>
   
   <url>
-    <loc>https://game.iosdevlog.com/2019/12/14/ARKit/</loc>
-    
-    <lastmod>2019-12-14T03:34:56.776Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/14/Free-Platform-Game-Assets/</loc>
-    
-    <lastmod>2019-12-14T02:48:29.944Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/11/English/</loc>
-    
-    <lastmod>2019-12-12T05:39:24.732Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/10/Hexagon/</loc>
-    
-    <lastmod>2019-12-10T11:58:48.397Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://game.iosdevlog.com/2019/12/03/Templete/</loc>
     
     <lastmod>2019-12-10T11:37:43.286Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/04/Bomber-Man/</loc>
-    
-    <lastmod>2019-12-10T11:37:25.558Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/05/Guess-The-Number/</loc>
-    
-    <lastmod>2019-12-10T11:37:17.232Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/06/Box-Tower/</loc>
-    
-    <lastmod>2019-12-10T11:37:12.087Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/09/Type-Game/</loc>
-    
-    <lastmod>2019-12-10T11:37:04.712Z</lastmod>
     
   </url>
   
