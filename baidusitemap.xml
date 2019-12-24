@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://game.iosdevlog.com/2019/12/24/Box2D/</loc>
+    <lastmod>2019-12-24</lastmod>
+  </url>  <url>
     <loc>https://game.iosdevlog.com/2019/12/19/SFML/</loc>
-    <lastmod>2019-12-19</lastmod>
+    <lastmod>2019-12-20</lastmod>
   </url>  <url>
     <loc>https://game.iosdevlog.com/2019/12/04/Bomber-Man/</loc>
     <lastmod>2019-12-19</lastmod>
@@ -16,10 +19,10 @@
     <loc>https://game.iosdevlog.com/2019/12/14/ARKit/</loc>
     <lastmod>2019-12-19</lastmod>
   </url>  <url>
-    <loc>https://game.iosdevlog.com/2019/12/14/Free-Platform-Game-Assets/</loc>
+    <loc>https://game.iosdevlog.com/2019/12/14/Tetris/</loc>
     <lastmod>2019-12-19</lastmod>
   </url>  <url>
-    <loc>https://game.iosdevlog.com/2019/12/14/Tetris/</loc>
+    <loc>https://game.iosdevlog.com/2019/12/14/Free-Platform-Game-Assets/</loc>
     <lastmod>2019-12-19</lastmod>
   </url>  <url>
     <loc>https://game.iosdevlog.com/2019/12/05/Guess-The-Number/</loc>

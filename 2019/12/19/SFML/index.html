@@ -99,11 +99,13 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;www.sfml-dev.org&#x2F;images&#x2F;home&#x2F;multiplatform.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;www.sfml-dev.org&#x2F;images&#x2F;home&#x2F;multilanguage.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;SFML&#x2F;SFML_App_Issue.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;SFML&#x2F;Build_Phase.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;SFML&#x2F;Copy_Files.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;SFML&#x2F;GameDevLog.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;SFML&#x2F;loop.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;SFML&#x2F;Game_Loop.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;SFML&#x2F;representing.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;game.iosdevlog.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;Bomber-Man&#x2F;Build_Settings.png">
-<meta property="og:updated_time" content="2019-12-19T08:57:13.998Z">
+<meta property="og:updated_time" content="2019-12-20T02:07:17.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;www.sfml-dev.org&#x2F;images&#x2F;logo.png">
 
@@ -357,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-12-19T16:57:13+08:00">
-                2019-12-19
+              <time title="更新于" itemprop="dateModified" datetime="2019-12-20T10:07:17+08:00">
+                2019-12-20
               </time>
             
           </span>
@@ -407,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  988
+                  941
                 </span>
               
 
@@ -510,7 +512,24 @@
 
 <h4 id="SFML-CLT"><a href="#SFML-CLT" class="headerlink" title="SFML CLT"></a><code>SFML CLT</code></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">2019-12-19 14:36:17.966474+0800 sa[79489:1852939] Metal API Validation Enabled</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">2019-12-19 14:36:18.114539+0800 sa[79489:1853624] flock failed to lock maps file: errno &#x3D; 35</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">2019-12-19 14:36:18.116856+0800 sa[79489:1853624] flock failed to lock maps file: errno &#x3D; 35</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">Failed to load image &quot;icon.png&quot;. Reason: Unable to open file</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">Program ended with exit code: 1</span></pre></td></tr></table></figure>
 
-<p>可能相对路径不行，用绝对路径可以</p>
+<ul>
+<li>Target<ul>
+<li>Build Phase<ul>
+<li><code>+</code> New Copy Files Phase<ul>
+<li>add Resources</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2019/12/19/SFML/Build_Phase.png" class="" title="Build Phase">
+
+<img src="/2019/12/19/SFML/Copy_Files.png" class="" title="Copy Files">
+
+<img src="/2019/12/19/SFML/GameDevLog.png" class="" title="Demo">
+
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><ul>
 <li>Window creation / 创建窗口</li>
 <li>Creation of graphic display / 显示图形</li>
@@ -552,27 +571,12 @@
 <h4 id="同时编译多个-cpp-文件"><a href="#同时编译多个-cpp-文件" class="headerlink" title="同时编译多个 cpp 文件"></a>同时编译多个 cpp 文件</h4><p><code>CMakeLists.txt</code></p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.1</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">project</span>(MulitExe)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">file</span>(GLOB_RECURSE EXTRA_FILES */*)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">add_custom_target</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>_OTHER_FILES ALL WORKING_DIRECTORY <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span> SOURCES <span class="variable">$&#123;EXTRA_FILES&#125;</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">file</span>(GLOB_RECURSE code_sources <span class="string">"*.cpp"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">foreach</span>(code_src <span class="variable">$&#123;code_sources&#125;</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">get_filename_component</span>(mexecutable <span class="variable">$&#123;code_src&#125;</span> NAME_WE)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">find_package</span>(SFML <span class="number">2.5</span> COMPONENTS system window graphics audio network REQUIRED)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">add_executable</span>(<span class="variable">$&#123;mexecutable&#125;</span> <span class="variable">$&#123;code_src&#125;</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;mexecutable&#125;</span> sfml-system sfml-window sfml-graphics sfml-audio sfml-network)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">endforeach</span>()</span></pre></td></tr></table></figure>
 
-<h2 id="导出游戏"><a href="#导出游戏" class="headerlink" title="导出游戏"></a>导出游戏</h2><ul>
-<li>File<ul>
-<li>Build Settings (Shift + Cmd + B)</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://game.iosdevlog.com/2019/12/04/Bomber-Man/Build_Settings.png" alt="Build Settings"></p>
-<ul>
-<li>Project Settings</li>
-</ul>
-
-
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>参考：</p>
 <ol>
 <li><a href="https://www.sfml-dev.org/tutorials/2.5/start-osx.php" target="_blank" rel="noopener">SFML and Xcode (macOS)</a></li>
 <li><a href="https://www.youtube.com/watch?v=WOyp5n2FmZY" target="_blank" rel="noopener">C++ SFML 2.5 Library macOS Installation + First Project (Easy)</a></li>
 <li><a href="https://en.sfml-dev.org/forums/index.php?topic=24070.0" target="_blank" rel="noopener">SFML 2.5 CMake Migration</a></li>
 </ol>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
-<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
-<p>找到游戏列表对应的 <a href="https://game.iosdevlog.com">GameDevLog</a></p>
 
       
     </div>
@@ -594,7 +598,7 @@
   <p><span>本文标题:</span>SFML</a></p>
   <p><span>文章作者:</span>iOSDevLog</a></p>
   <p><span>发布时间:</span>2019年12月19日 - 09:15:58</p>
-  <p><span>最后更新:</span>2019年12月19日 - 16:57:13</p>
+  <p><span>最后更新:</span>2019年12月20日 - 10:07:17</p>
   <p><span>原始链接:</span><a href="/2019/12/19/SFML/" title="SFML">https://game.iosdevlog.com/2019/12/19/SFML/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://game.iosdevlog.com/2019/12/19/SFML/"  aria-label="复制成功！"></i></span>
   </p>
@@ -691,6 +695,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/12/24/Box2D/" rel="prev" title="Box2D">
+                Box2D <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -770,7 +778,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -865,7 +873,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Simple-and-Fast-Multimedia-Library"><span class="nav-number">2.</span> <span class="nav-text">Simple and Fast Multimedia Library</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多媒体"><span class="nav-number">2.1.</span> <span class="nav-text">多媒体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多平台"><span class="nav-number">2.2.</span> <span class="nav-text">多平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多语言"><span class="nav-number">2.3.</span> <span class="nav-text">多语言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教程"><span class="nav-number">3.</span> <span class="nav-text">教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SFML-and-Xcode-macOS"><span class="nav-number">3.1.</span> <span class="nav-text">SFML and Xcode (macOS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">3.2.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SFML-App"><span class="nav-number">3.2.1.</span> <span class="nav-text">SFML App</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SFML-CLT"><span class="nav-number">3.2.2.</span> <span class="nav-text">SFML CLT</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">4.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">Example 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同时编译多个-cpp-文件"><span class="nav-number">4.0.2.</span> <span class="nav-text">同时编译多个 cpp 文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导出游戏"><span class="nav-number">5.</span> <span class="nav-text">导出游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">6.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">7.</span> <span class="nav-text">下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏"><span class="nav-number">7.1.</span> <span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number">7.2.</span> <span class="nav-text">源码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Simple-and-Fast-Multimedia-Library"><span class="nav-number">2.</span> <span class="nav-text">Simple and Fast Multimedia Library</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多媒体"><span class="nav-number">2.1.</span> <span class="nav-text">多媒体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多平台"><span class="nav-number">2.2.</span> <span class="nav-text">多平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多语言"><span class="nav-number">2.3.</span> <span class="nav-text">多语言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教程"><span class="nav-number">3.</span> <span class="nav-text">教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SFML-and-Xcode-macOS"><span class="nav-number">3.1.</span> <span class="nav-text">SFML and Xcode (macOS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">3.2.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SFML-App"><span class="nav-number">3.2.1.</span> <span class="nav-text">SFML App</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SFML-CLT"><span class="nav-number">3.2.2.</span> <span class="nav-text">SFML CLT</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">4.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">Example 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同时编译多个-cpp-文件"><span class="nav-number">4.0.2.</span> <span class="nav-text">同时编译多个 cpp 文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
@@ -906,7 +914,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9k</span>
+    <span title="Site words total count">9.2k</span>
   
 </div>
 
