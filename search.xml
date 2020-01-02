@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Coin Dash</title>
+    <url>/2020/01/02/Coin-Dash/</url>
+    <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/10.CoinDash.gif" alt="Coin Dash!"></p>
+<a id="more"></a>
+
+<h2 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h2><p>游戏开发是复杂的，涉及到各种各样的知识和技能。为了创造一款现代游戏，你需要大量的基础技术才能创造出真正的游戏。想象一下，在你开始编程之前，你必须建造自己的电脑，编写自己的操作系统。如果你真的需要从头开始并创造你所需要的一切，游戏开发将会非常类似于此。</p>
+<p>此外，每个游戏都有一些共同的需求。例如，不管游戏是什么，它都需要在屏幕上绘制东西。如果要做这些的代码已经写好了，那么重用它比为每个游戏重新创建它更有意义。这就是游戏框架和引擎的用武之地。</p>
+<p><code>游戏框架</code> 是一组带有辅助代码的库，帮助构建游戏的基本部分。它不一定提供所有的部分，而且您可能仍然需要编写大量的代码来将所有的部分联系在一起。因此，构建一个游戏需要从其他工具中导入内容，比如那些用于创建动画或3D模型的工具。</p>
+<p>使用 <code>游戏引擎</code> 可以让开发者专注于构建他们的游戏，而不是创建所有需要的底层框架。对于小型或独立开发者来说，这可能意味着在一年而不是三年的开发后发行游戏，甚至是从未发行过游戏。<br>以下是游戏引擎提供的一些主要功能:</p>
+<ul>
+<li><code>渲染(2D和3D)</code>: 渲染是在玩家的屏幕上显示游戏的过程。一个好的渲染管道必须考虑到现代 GPU 的支持，高分辨率的显示，以及像灯光、透视和视口这样的效果，同时保持一个非常高的帧速率。</li>
+<li><code>物理</code>: 虽然这是一个非常普遍的需求，但构建一个健壮而准确的物理引擎是一项艰巨的任务。大多数游戏都需要某种碰撞检测和响应系统，许多游戏都需要物理模拟，但很少有开发者愿意承担编写这样的游戏的任务，特别是如果他们曾经尝试过这样做的话。</li>
+<li><code>平台支持</code>: 在今天的市场中，大多数开发者都希望能够在多个平台上发布他们的游戏，例如主机，手机，PC 和/或网络。游戏引擎提供了一个统一的导出过程，可以在多个平台上发布，而不需要重写游戏代码或支持多个版本。</li>
+<li><code>通用开发环境</code>: 通过使用相同的统一界面制作多个游戏，你不必每次开始一个新项目时都重新学习一个新的工作流程。”</li>
+</ul>
+<p>此外，还会有一些工具来帮助你实现一些功能，比如联网、简化处理图像和声音、动画、调试、关卡创建等等。通常，游戏引擎将包括从其他工具(如用于创建动画或 3D模型的工具)导入内容的能力。</p>
+<p>使用游戏引擎可以让开发者专注于构建他们的游戏，而不是创建所有的底层内容。</p>
+<p>框架需要使它工作。对于小型或独立开发者来说，这可能意味着在一年而不是三年的开发后发行游戏，甚至是从未发行过游戏。</p>
+<p>现在市场上有很多流行的游戏引擎，例如 <code>Unity, Unreal Engine, GameMaker Studio</code> 等等。需要注意的一个重要事实是，大多数流行的游戏引擎都是商业产品。他们可能需要或不需要任何财务投资来开始，但如果你的游戏赚钱，他们将需要一些许可和/或版税。无论您选择哪种引擎，您都需要仔细阅读用户协议，并确保您了解您是什么以及不允许您使用该引擎，以及您可能要承担的隐藏成本(如果有的话)。</p>
+<p>另一方面，也有一些非商业性和开源的引擎，比如 <code>Godot</code> 游戏引擎。</p>
+<h2 id="Godot"><a href="#Godot" class="headerlink" title="Godot"></a>Godot</h2><p>Godot 是一个功能齐全的现代游戏引擎，提供了上一节和更多内容中描述的所有功能。它也是完全免费和开源的，在非常宽松的 <code>MIT</code> 许可下发布。这意味着你的游戏没有费用，没有隐藏成本，也没有版税。你使用 Godot 所创造的一切都是属于你自己的，这与许多需要持续合同关系的商业游戏引擎不同。对于许多开发人员来说，这非常有吸引力。</p>
+<p>如果您不熟悉开源、社区驱动开发的概念，那么您可能会觉得奇怪。然而，就像 Linux 内核、Firefox 浏览器和许多其他非常著名的软件一样，Godot 并不是由公司作为商业产品开发的。相反，热情的开发人员组成了一个专门的社区，贡献他们的时间和专业知识来构建引擎、测试和修复 bug、生成文档等等。</p>
+<p>作为一名游戏开发者，使用 Godot 的好处是巨大的。因为它不受商业许可的限制，所以你可以完全控制游戏的发行方式和发行地点。许多商业游戏引擎都限制了你可以制作的项目类型，或者需要更昂贵的许可证才能在某些类别(如赌博)中制作游戏。</p>
+<p>Godot 的开源特性也意味着它具有商业游戏引擎所不具备的透明度。例如，如果您发现某个特定的引擎特性不能完全满足您的需求，您可以自由地修改 <em>引擎本身并添加您需要的新特性，不需要任何权限</em>。这在调试大型项目时也非常有用，因为您可以完全访问引擎的内部工作。</p>
+<h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><p>节点是在 Godot 中创建游戏的基本构建块。 节点是可以代表各种专用游戏功能的对象。 给定类型的节点可能会显示图形，播放动画或表示对象的 3D 模型。 该节点还包含属性的集合，允许您自定义其行为。 您添加到项目中的哪些节点取决于所需的功能。 这是一个模块化系统，旨在为您提供构建游戏对象的灵活性。</p>
+<p>在您的项目中，您添加的节点被组织成树状结构。 在树中，将节点添加为其他节点的子代。 一个特定的节点可以有任意数量的子节点，但只能有一个父节点。 将一组节点收集到树中时，它称为 <code>scene (场景)</code>，该树称为 <code>scenes(场景树)</code>：</p>
+<h2 id="Coin-Dash-金币冲冲冲"><a href="#Coin-Dash-金币冲冲冲" class="headerlink" title="Coin Dash (金币冲冲冲)"></a>Coin Dash (金币冲冲冲)</h2><h3 id="Project-Setup"><a href="#Project-Setup" class="headerlink" title="Project Setup"></a>Project Setup</h3><ul>
+<li>Project menu &gt; Project Settings<ul>
+<li>Display<ul>
+<li>Window<ul>
+<li>Size<ul>
+<li>Width: <code>480</code></li>
+<li>Height: <code>720</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Stretch<ul>
+<li>Mode: <code>2d</code></li>
+<li>Aspect: <code>keep</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rendering<ul>
+<li>Quality<ul>
+<li>2d<ul>
+<li>Use Pixel Snap: <code>On</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Player-Scene"><a href="#Player-Scene" class="headerlink" title="Player Scene"></a>Player Scene</h3><ul>
+<li>Scene<ul>
+<li>Area2D: <code>Player</code> &amp; <code>not selectable</code><ul>
+<li>AnimatedSprite</li>
+<li>CollisionShape2D</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inspector<ul>
+<li>AnimatedSprite<ul>
+<li>Frames: <code>New SpriteFrames</code><ul>
+<li>Animations<ul>
+<li>hurt</li>
+<li>idle</li>
+<li>run</li>
+</ul>
+</li>
+<li>Speed(FPS):<ul>
+<li>8</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Playing<ul>
+<li>On: <code>true</code></li>
+</ul>
+</li>
+<li>Offset<ul>
+<li>x: <code>0</code></li>
+<li>y: <code>-5</code></li>
+</ul>
+</li>
+<li>Scale<ul>
+<li>x: <code>3</code></li>
+<li>y: <code>3</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CollisionShape2D<ul>
+<li>Shape<ul>
+<li>RectangleShape2D</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul>
+<li>Player<ul>
+<li>Script: <code>Player.cs</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Godot;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Player</span> : <span class="title">Area2D</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="comment">// How fast the player will move (pixels/sec).</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">    [<span class="meta">Export</span>]</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> Speed = <span class="number">400</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="comment">// Size of the game window.</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> Vector2 screenSize;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="comment">// The player's movement vector.</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> Vector2 velocity;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> _Ready()</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        screenSize = GetViewport().GetSize();</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> _Process(<span class="keyword">float</span> delta)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        _GetInput();</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        Position += velocity * delta;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        Position = <span class="keyword">new</span> Vector2(</span></pre></td></tr><tr><td class="code"><pre><span class="line">            x: Mathf.Clamp(Position.x, <span class="number">0</span>, screenSize.x),</span></pre></td></tr><tr><td class="code"><pre><span class="line">            y: Mathf.Clamp(Position.y, <span class="number">0</span>, screenSize.y)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        );</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">var</span> animatedSprite = GetNode&lt;AnimatedSprite&gt;(<span class="string">"AnimatedSprite"</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (velocity.Length() &gt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            animatedSprite.Animation = <span class="string">"run"</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            animatedSprite.FlipH = velocity.x &lt; <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">else</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            animatedSprite.Animation = <span class="string">"idle"</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> _GetInput()</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        velocity = <span class="keyword">new</span> Vector2();</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Input.IsActionPressed(<span class="string">"ui_right"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            velocity.x += <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Input.IsActionPressed(<span class="string">"ui_left"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            velocity.x -= <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Input.IsActionPressed(<span class="string">"ui_down"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            velocity.y += <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (Input.IsActionPressed(<span class="string">"ui_up"</span>))</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            velocity.y -= <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="keyword">if</span> (velocity.Length() &gt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            velocity = velocity.Normalized() * Speed;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p><strong>未完待续</strong></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>参考：</p>
+<ol>
+<li><a href="https://github.com/PacktPublishing/Godot-Game-Engine-Projects" target="_blank" rel="noopener">Godot Game Engine Projects</a></li>
+</ol>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>Release: <a href="https://github.com/GameDevLog/GameDevLogTemplete/releases" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete/releases</a></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>GitHub: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p>
+<p>找到游戏列表对应的 <a href="https://game.iosdevlog.com">GameDevLog</a></p>
+]]></content>
+      <categories>
+        <category>Godot</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>Design</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Box2D</title>
     <url>/2019/12/24/Box2D/</url>
     <content><![CDATA[<h2 id="Box2D-官网"><a href="#Box2D-官网" class="headerlink" title="Box2D 官网"></a>Box2D 官网</h2><img src="/2019/12/24/Box2D/Box2D.png" class="" title="http:&#x2F;&#x2F;box2d.org">
@@ -393,7 +528,7 @@
       </tags>
   </entry>
   <entry>
-    <title>ARKit</title>
+    <title>ARFoundation</title>
     <url>/2019/12/14/ARKit/</url>
     <content><![CDATA[<h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><p><img src="https://raw.githubusercontent.com/GameDevLog/GameDevLogTemplete/master/ScreenShots/8.ARDemo.gif" alt="ARDemo"></p>
 <a id="more"></a>

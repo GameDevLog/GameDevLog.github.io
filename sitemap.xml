@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://game.iosdevlog.com/2020/01/02/Coin-Dash/</loc>
+    
+    <lastmod>2020-01-02T15:13:14.478Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://game.iosdevlog.com/2019/12/14/ARKit/</loc>
+    
+    <lastmod>2019-12-24T13:06:05.286Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://game.iosdevlog.com/2019/12/24/Box2D/</loc>
     
     <lastmod>2019-12-24T03:39:10.632Z</lastmod>
@@ -31,13 +45,6 @@
   
   <url>
     <loc>https://game.iosdevlog.com/2019/12/11/Sunny-Land/</loc>
-    
-    <lastmod>2019-12-19T07:40:59.187Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://game.iosdevlog.com/2019/12/14/ARKit/</loc>
     
     <lastmod>2019-12-19T07:40:59.187Z</lastmod>
     
